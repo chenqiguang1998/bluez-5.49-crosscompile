@@ -37,7 +37,7 @@ public class testjni
 		starttime.setHour(18);
 		starttime.setMinute(0);
 		starttime.setSecond(0);
-		starttime.setZone("UTC");
+		starttime.setIs_utc(true);
 		System.out.println("done creating starttime");
 
 		ICalTimeType endtime = new ICalTimeType();
@@ -47,7 +47,7 @@ public class testjni
 		endtime.setHour(8);
 		endtime.setMinute(0);
 		endtime.setSecond(0);
-		endtime.setZone("UTC");
+		endtime.setIs_utc(true);
 		System.out.println("done creating endtime");
 
 
@@ -258,7 +258,7 @@ public class testjni
 		time_tma.setHour(2);
 		time_tma.setMinute(2);
 		time_tma.setSecond(2);
-		time_tma.setZone("UTC");
+		time_tma.setIs_utc(true);
 
 		ic.set_recurrenceid(time_tma);
 
@@ -299,7 +299,7 @@ public class testjni
                 duetime.setHour(18);
                 duetime.setMinute(0);
                 duetime.setSecond(0);
-                duetime.setZone("UTC");
+                duetime.setIs_utc(true);
                 System.out.println("done creating duetime");
 
                 statusProp.set_status(ICalProperty.ICalPropertyStatus.ICAL_STATUS_COMPLETED);

@@ -1,21 +1,28 @@
-#!/usr/bin/env python
+#!/usr/bin/env python 
+# -*- Mode: python -*-
 #======================================================================
 # FILE: Collection.py
-# CREATOR: eric
+# CREATOR: eric 
+#
+# DESCRIPTION:
+#   
+#
+#  $Id: Collection.py,v 1.3 2001-03-11 00:46:57 plewis Exp $
+#  $Locker:  $
 #
 # (C) COPYRIGHT 2001, Eric Busboom <eric@softwarestudio.org>
-# (C) COPYRIGHT 2001, Patrick Lewis <plewis@inetarena.com>
+# (C) COPYRIGHT 2001, Patrick Lewis <plewis@inetarena.com>  
 #
-# This library is free software; you can redistribute it and/or modify
-# it under the terms of either:
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of either: 
 #
-#   The LGPL as published by the Free Software Foundation, version
-#   2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.txt
+#    The LGPL as published by the Free Software Foundation, version
+#    2.1, available at: http://www.fsf.org/copyleft/lesser.html
 #
-# Or:
+#  Or:
 #
-#   The Mozilla Public License Version 2.0. You may obtain a copy of
-#   the License at http://www.mozilla.org/MPL/
+#    The Mozilla Public License Version 1.0. You may obtain a copy of
+#    the License at http://www.mozilla.org/MPL/
 #======================================================================
 
 from types import *
@@ -51,7 +58,7 @@ class Collection:
         self._properties[beg:end] = sequence
         for p in sequence:
             self._component.add_property(p)
-
+            
     def __getitem__(self, i):
         return self._properties[i]
 
@@ -69,19 +76,19 @@ class Collection:
 
     def __str__(self):
         s = "[ "
-        if self._properties:
+        if len(self._properties) > 0:
             s = s + str(self._properties[0])
             for p in self._properties[1:]:
                 s = "%s, %s" % (s, p)
         s = s + " ]"
         return s
-
+            
     def append(self, property):
         self._properties.append(property)
         self._component.add_property(property)
 
 class ComponentCollection:
-
+    
     def __init__(self, parent, componentSequence):
         self._parent = parent
         self._components = list(componentSequence[:])
@@ -106,16 +113,16 @@ class ComponentCollection:
         self._components[i]=prop
 
     def __delitem__(self, i):
-        self._parent.remove_component(self._components[i])
+        self._parent.remove_componet(self._components[i])
         del self._components[i]
 
     def __len__(self):
         return len(self._components)
-
+    
     def __add__(self, iterable):
         for i in iterable:
             self.append(i)
-
+    
     def append(self, property):
         self._components.append(property)
         self._parent.add_component(property)

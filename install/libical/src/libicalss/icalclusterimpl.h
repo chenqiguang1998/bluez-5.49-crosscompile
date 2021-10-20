@@ -1,36 +1,45 @@
-/*======================================================================
- FILE: icalfilesetimpl.h
- CREATOR: acampi 13 March 2002
+/* -*- Mode: C -*-
+  ======================================================================
+  FILE: icalfilesetimpl.h
+  CREATOR: eric 23 December 1999
+  
+  $Id: icalclusterimpl.h,v 1.2 2007-04-30 13:57:48 artcancro Exp $
+  $Locker:  $
+    
+ (C) COPYRIGHT 2000, Eric Busboom, http://www.softwarestudio.org
 
- Copyright (C) 2002 Andrea Campi <a.campi@inet.it>
-
- This library is free software; you can redistribute it and/or modify
- it under the terms of either:
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of either: 
 
     The LGPL as published by the Free Software Foundation, version
-    2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.html
+    2.1, available at: http://www.fsf.org/copyleft/lesser.html
 
- Or:
+  Or:
 
-    The Mozilla Public License Version 2.0. You may obtain a copy of
+    The Mozilla Public License Version 1.0. You may obtain a copy of
     the License at http://www.mozilla.org/MPL/
-======================================================================*/
 
-#ifndef ICALCLUSTERIMPL_H
-#define ICALCLUSTERIMPL_H
+ The Original Code is eric. The Initial Developer of the Original
+ Code is Eric Busboom
+
+
+ ======================================================================*/
+
+
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
 
 /* This definition is in its own file so it can be kept out of the
    main header file, but used by "friend classes" like icaldirset*/
 
 #define ICALCLUSTER_ID "clus"
 
-struct icalcluster_impl
-{
-    char id[5]; /* clus */
+struct icalcluster_impl {
 
-    char *key;
-    icalcomponent *data;
-    int changed;
+	char		id[5];		/* clus */
+
+	char	       *key;
+	icalcomponent  *data;
+	int		changed;
 };
-
-#endif

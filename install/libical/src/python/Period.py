@@ -1,21 +1,28 @@
-#!/usr/bin/env python
+#!/usr/bin/env python 
+# -*- Mode: python -*-
 #======================================================================
 # FILE: Period.py
-# CREATOR: eric
+# CREATOR: eric 
+#
+# DESCRIPTION:
+#   
+#
+#  $Id: Period.py,v 1.1 2001-04-03 15:18:42 ebusboom Exp $
+#  $Locker:  $
 #
 # (C) COPYRIGHT 2001, Eric Busboom <eric@softwarestudio.org>
-# (C) COPYRIGHT 2001, Patrick Lewis <plewis@inetarena.com>
+# (C) COPYRIGHT 2001, Patrick Lewis <plewis@inetarena.com>  
 #
-# This library is free software; you can redistribute it and/or modify
-# it under the terms of either:
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of either: 
 #
-#   The LGPL as published by the Free Software Foundation, version
-#   2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.txt
+#    The LGPL as published by the Free Software Foundation, version
+#    2.1, available at: http://www.fsf.org/copyleft/lesser.html
 #
-# Or:
+#  Or:
 #
-#   The Mozilla Public License Version 2.0. You may obtain a copy of
-#   the License at http://www.mozilla.org/MPL/
+#    The Mozilla Public License Version 1.0. You may obtain a copy of
+#    the License at http://www.mozilla.org/MPL/
 #===========================================================
 
 from LibicalWrap import *
@@ -32,13 +39,13 @@ class Period(Property):
         Property.__init__(self, type = name)
 
         self.pt=None
-
+        
         #icalerror_clear_errno()
         e1=icalerror_supress("MALFORMEDDATA")
         e2=icalerror_supress("BADARG")
 
         if isinstance(arg, DictType):
-
+            
 
             es=icalerror_supress("MALFORMEDDATA")
             self.pt = icalperiodtype_from_string(arg['value'])
@@ -54,7 +61,7 @@ class Period(Property):
                 self.pt = icalperiodtype_null_period()
 
             Property.__init__(self,type=name)
-
+                
         icalerror_restore("MALFORMEDDATA",e1)
         icalerror_restore("BADARG",e2)
 
@@ -62,13 +69,13 @@ class Period(Property):
         if self.pt == None or icalperiodtype_is_null_period(self.pt):
             raise Property.ConstructorFailedError("Failed to construct Period")
 
-
+        
         try:
             self._update_value()
         except Property.UpdateFailedError:
             raise Property.ConstructorFailedError("Failed to construct Period")
 
-    def _end_is_duration(self):
+    def _end_is_duration(self):        
         dur = self.pt.duration
         if not icaldurationtype_is_null_duration(dur):
             return 1
@@ -108,8 +115,8 @@ class Period(Property):
             self.pt.start = t.tt
 
             self._update_value()
-
-
+                
+        
         return Time(self.pt.start.as_timet(),
                     "DTSTART")
 
@@ -123,7 +130,7 @@ class Period(Property):
         method will caluculate the end time from the duration.  """
 
         if(v != None):
-
+            
             if isinstance(t,Time):
                 t = v
             elif isinstance(t,StringType) or isinstance(t,IntType):
@@ -137,7 +144,7 @@ class Period(Property):
                 self.pt.duration = icaldurationtype_from_int(dur)
             else:
                 self.pt.end = t.tt
-
+                
             self._update_value()
 
         if(self._end_is_time()):
@@ -166,7 +173,7 @@ class Period(Property):
         method will calculate the duration from the end time.  """
 
         if(v != None):
-
+            
             if isinstance(t,Duration):
                 d = v
             elif isinstance(t,StringType) or isinstance(t,IntType):
@@ -181,7 +188,7 @@ class Period(Property):
                 self.pt.end = icaltimetype.from_timet(end)
             else:
                 self.pt.duration = d.dur
-
+                
         if(self._end_is_time()):
             start = self.pt.start.as_timet()
             end = self.pt.end.as_timet()

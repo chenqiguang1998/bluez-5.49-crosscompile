@@ -210,7 +210,7 @@ am__append_25 = gdbus-test-codegen-generated.[ch] gdbus-test-codegen-generated-d
 
 # -----------------------------------------------------------------------------
 #am__append_26 = win32-streams
-#am__append_27 = gdbus-serialization
+am__append_27 = gdbus-serialization
 am__append_28 = \
 	autoptr				\
 	$(NULL)
@@ -334,7 +334,7 @@ am__EXEEXT_3 = actions$(EXEEXT) \
 	gnotification$(EXEEXT) \
 	$(am__EXEEXT_1)
 #am__EXEEXT_4 = win32-streams$(EXEEXT)
-#am__EXEEXT_5 = gdbus-serialization$(EXEEXT)
+am__EXEEXT_5 = gdbus-serialization$(EXEEXT)
 am__EXEEXT_6 = autoptr$(EXEEXT) $(am__EXEEXT_1)
 am__EXEEXT_7 = appmonitor$(EXEEXT) async-close-output-stream$(EXEEXT) \
 	async-splice-output-stream$(EXEEXT) \
@@ -1025,11 +1025,11 @@ gdbus_proxy_well_known_name_DEPENDENCIES =  \
 	$(top_builddir)/glib/libglib-2.0.la $(am__DEPENDENCIES_1)
 am__gdbus_serialization_SOURCES_DIST = gdbus-serialization.c \
 	gdbus-tests.h gdbus-tests.c
-#am_gdbus_serialization_OBJECTS = gdbus_serialization-gdbus-serialization.$(OBJEXT) \
-#	gdbus_serialization-gdbus-tests.$(OBJEXT)
+am_gdbus_serialization_OBJECTS = gdbus_serialization-gdbus-serialization.$(OBJEXT) \
+	gdbus_serialization-gdbus-tests.$(OBJEXT)
 gdbus_serialization_OBJECTS = $(am_gdbus_serialization_OBJECTS)
-#gdbus_serialization_DEPENDENCIES =  \
-#	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
+gdbus_serialization_DEPENDENCIES =  \
+	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
 gdbus_serialization_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(gdbus_serialization_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
@@ -1845,8 +1845,8 @@ CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DATADIRNAME = share
-DBUS1_CFLAGS = 
-DBUS1_LIBS = 
+DBUS1_CFLAGS = -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+DBUS1_LIBS = -ldbus-1
 DBUS_DAEMON = dbus-daemon
 DEFS = -DG_LOG_DOMAIN=\"GLib-GIO\" -DTEST_SERVICES=\""$(abs_top_builddir)/gio/tests/services"\"
 DEPDIR = .deps
@@ -1977,9 +1977,9 @@ PO_IN_DATADIR_FALSE =
 PO_IN_DATADIR_TRUE = 
 PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
-PYTHON_PLATFORM = linux2
+PYTHON_PLATFORM = linux
 PYTHON_PREFIX = ${prefix}
-PYTHON_VERSION = 2.7
+PYTHON_VERSION = 3.8
 RANLIB = arm-linux-gnueabihf-ranlib
 REBUILD = 
 SED = /usr/bin/sed
@@ -2054,8 +2054,8 @@ pkgpythondir = ${pythondir}/glib
 prefix = /home/chen/work/bluez/build
 program_transform_name = s,x,x,
 psdir = ${docdir}
-pyexecdir = ${exec_prefix}/lib/python2.7/site-packages
-pythondir = ${prefix}/lib/python2.7/site-packages
+pyexecdir = ${exec_prefix}/lib/python3.8/site-packages
+pythondir = ${prefix}/lib/python3.8/site-packages
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
@@ -2382,12 +2382,12 @@ gmenumodel_SOURCES = $(gdbus_sessionbus_sources) gmenumodel.c
 gnotification_SOURCES = $(gdbus_sessionbus_sources) gnotification.c gnotification-server.h gnotification-server.c
 tls_interaction_SOURCES = tls-interaction.c gtesttlsbackend.c gtesttlsbackend.h
 #no_undefined = -no-undefined
-#gdbus_serialization_CFLAGS = $(AM_CFLAGS) $(DBUS1_CFLAGS)
-#gdbus_serialization_LDADD = $(LDADD) $(DBUS1_LIBS)
-#gdbus_serialization_SOURCES = \
-#	gdbus-serialization.c			\
-#	gdbus-tests.h				\
-#	gdbus-tests.c
+gdbus_serialization_CFLAGS = $(AM_CFLAGS) $(DBUS1_CFLAGS)
+gdbus_serialization_LDADD = $(LDADD) $(DBUS1_LIBS)
+gdbus_serialization_SOURCES = \
+	gdbus-serialization.c			\
+	gdbus-tests.h				\
+	gdbus-tests.c
 
 resources_SOURCES = resources.c
 nodist_resources_SOURCES = test_resources.c test_resources2.c test_resources2.h

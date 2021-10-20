@@ -1,25 +1,30 @@
-/*
- * Authors :
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
+/* 
+ * Authors : 
  *  Chenthill Palanisamy <pchenthill@novell.com>
  *
  * Copyright 2007, Novell, Inc.
  *
- * This library is free software; you can redistribute it and/or modify
- * it under the terms of either:
+ * This program is free software; you can redistribute it and/or 
+ * modify it under the terms of version 2 of the GNU Lesser General Public 
+ * License as published by the Free Software Foundation.
  *
- *   The LGPL as published by the Free Software Foundation, version
- *   2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.html
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
  *
- * Or:
- *
- *   The Mozilla Public License Version 2.0. You may obtain a copy of
- *   the License at http://www.mozilla.org/MPL/
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, 
+ * Boston, MA 02110-1301, USA.
  */
 
 #ifndef ICALTZUTIL_H
 #define ICALTZUTIL_H
 
-#include "libical_ical_export.h"
+#include <stdio.h> 
+#include "icaltime.h"
 #include "icalcomponent.h"
 
 #if defined(sun) && defined(__SVR4)
@@ -28,8 +33,7 @@
 #define ZONES_TAB_SYSTEM_FILENAME "zone.tab"
 #endif
 
-LIBICAL_ICAL_EXPORT const char *icaltzutil_get_zone_directory(void);
+const char *icaltzutil_get_zone_directory (void);
+icalcomponent *icaltzutil_fetch_timezone (const char *location);
 
-LIBICAL_ICAL_EXPORT icalcomponent *icaltzutil_fetch_timezone(const char *location);
-
-#endif
+#endif 

@@ -1,31 +1,42 @@
-/*======================================================================
- FILE: icaltestparser.c
- CREATOR: eric 20 June 1999
+/* -*- Mode: C -*-
+  ======================================================================
+  FILE: icaltestparser.c
+  CREATOR: eric 20 June 1999
+  
+  $Id: icaltestparser.c,v 1.4 2008-01-02 20:07:45 dothebart Exp $
+  $Locker:  $
+    
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.0 (the "License"); you may not use this file except in
+ compliance with the License. You may obtain a copy of the License at
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS"
+ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See
+ the License for the specific language governing rights and
+ limitations under the License.
 
- (C) COPYRIGHT 1999 The Software Studio <eric@softwarestudio.org>
-     http://www.softwarestudio.org
+  The original author is Eric Busboom
+  The original code is icaltestparser.c
 
- This library is free software; you can redistribute it and/or modify
- it under the terms of either:
+ 
+ (C) COPYRIGHT 1999 The Software Studio. 
+ http://www.softwarestudio.org
 
-    The LGPL as published by the Free Software Foundation, version
-    2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.html
-
- Or:
-
-    The Mozilla Public License Version 2.0. You may obtain a copy of
-    the License at http://www.mozilla.org/MPL/
-
- The original author is Eric Busboom
-======================================================================*/
+ ======================================================================*/
 
 #ifdef HAVE_CONFIG_H
-#include <config.h>
+#include "config.h"
 #endif
 
-#include "libical/ical.h"
+#include <stdio.h>
+#include <errno.h>
+#include <stdio.h>
+#include <string.h>
+#include <libical/ical.h>
 
-//krazy:cond=style
+#include <stdlib.h>
+
 char str[] = "BEGIN:VCALENDAR\
 PRODID:\"-//RDU Software//NONSGML HandCal//EN\"\
 VERSION:2.0\
@@ -66,56 +77,50 @@ LOCATION:1CP Conference Room 4350\
 END:VEVENT\
 END:VCALENDAR\
 ";
-//krazy:endcond=style
 
 extern int yydebug;
 
 /* Have the parser fetch data from stdin */
 
-char *read_stream(char *s, size_t size, void *d)
+char* read_stream(char *s, size_t size, void *d)
 {
-    char *c = fgets(s, (int)size, (FILE *) d);
+  char *c = fgets(s,size, (FILE*)d);
 
-    return c;
+  return c;
+
 }
 
-int main(int argc, char *argv[])
+
+
+int main(int argc, char* argv[])
 {
-    char *line;
-    FILE *stream;
-    icalcomponent *c;
+    _unused(argc)
+    char* line; 
+    FILE* stream;
+    icalcomponent *c; 
     icalparser *parser = icalparser_new();
 
-    if (argc != 2) {
-        fprintf(stderr, "Usage: parser [file.ics]\n");
-        return 0;
-    }
-    stream = fopen(argv[1], "r");
-    if (stream == (FILE *) NULL) {
-        fprintf(stderr, "Cannot open file \"%s\" for reading\n", argv[1]);
-        return 1;
-    }
+    stream = fopen(argv[1],"r");
 
-    icalparser_set_gen_data(parser, stream);
+    assert(stream != 0);
 
-    do {
+    icalparser_set_gen_data(parser,stream);
 
-        line = icalparser_get_line(parser, read_stream);
+    do{
+    
+	line = icalparser_get_line(parser,read_stream);
 
-        c = icalparser_add_line(parser, line);
-        icalmemory_free_buffer(line);
+	c = icalparser_add_line(parser,line);
 
-        if (c != 0) {
-            /*icalcomponent_convert_errors(c); */
-            printf("%s", icalcomponent_as_ical_string(c));
-            printf("\n---------------\n");
-            icalcomponent_free(c);
-        }
 
-    } while (line != 0);
+	if (c != 0){
+	    /*icalcomponent_convert_errors(c);*/
+	    printf("%s",icalcomponent_as_ical_string(c));
+	    printf("\n---------------\n");
+	    icalcomponent_free(c);
+	}
 
-    icalparser_free(parser);
-    fclose(stream);
+    } while ( line != 0);
 
     return 0;
-}
+ }

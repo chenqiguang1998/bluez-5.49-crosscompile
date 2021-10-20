@@ -1,20 +1,10 @@
+
 /*======================================================================
  FILE: net_cp_jlibical_ICalProperty_cxx.h
  CREATOR: javah 1/11/02
-
  (C) COPYRIGHT 2002, Critical Path
-
- This library is free software; you can redistribute it and/or modify
- it under the terms of either:
-
-    The LGPL as published by the Free Software Foundation, version
-    2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.html
-
- Or:
-
-    The Mozilla Public License Version 2.0. You may obtain a copy of
-    the License at http://www.mozilla.org/MPL/
 ======================================================================*/
+
 #ifndef _Included_net_cp_jlibical_ICalProperty
 #define _Included_net_cp_jlibical_ICalProperty
 
@@ -84,10 +74,10 @@ JNIEXPORT jstring JNICALL Java_net_cp_jlibical_ICalProperty_get_1parameter_1as_1
 
 /*
  * Class:     net_cp_jlibical_ICalProperty
- * Method:    remove_parameter_by_kind
+ * Method:    remove_parameter
  * Signature: (I)V
  */
-JNIEXPORT void JNICALL Java_net_cp_jlibical_ICalProperty_remove_1parameter_by_kind
+JNIEXPORT void JNICALL Java_net_cp_jlibical_ICalProperty_remove_1parameter
   (JNIEnv *, jobject, jint);
 
 /*
@@ -156,10 +146,10 @@ JNIEXPORT jstring JNICALL Java_net_cp_jlibical_ICalProperty_get_1name
 
 /*
  * Class:     net_cp_jlibical_ICalProperty
- * Method:    value_to_value_kind
+ * Method:    icalparameter_value_to_value_kind
  * Signature: (I)I
  */
-JNIEXPORT jint JNICALL Java_net_cp_jlibical_ICalProperty_value_1to_1value_1kind
+JNIEXPORT jint JNICALL Java_net_cp_jlibical_ICalProperty_icalparameter_1value_1to_1value_1kind
   (JNIEnv *, jclass, jint);
 
 /*

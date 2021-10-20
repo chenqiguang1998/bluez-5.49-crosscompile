@@ -1,23 +1,27 @@
 #!/bin/sh
 
-export PWD=/home/chen/work/bluez/install/python
+export home=/home/chen/work/bluez/install/python
 
 export work=/home/chen/work/bluez/build
 #编译pc版本python
-mkdir build-pc&&cd build-pc
+mkdir build-pc
+
+cd $home/build-pc
 
 ../configure
 
 make python Parser/pgen
 
-cd $PWD 
+cd $home 
 #编译arm版本Python
-mkdir build-arm&&cd build-arm
+mkdir build-arm
+
+cd ./build-arm
 
 ../configure \
 --host=arm-linux-gnueabihf \
 --build=x86_64-linux-gnu \
---prefix=$work \
+--prefix=/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/ \
 --disable-ipv6 \
 ac_cv_file__dev_ptmx=no \
 ac_cv_file__dev_ptc=no \

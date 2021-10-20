@@ -1,20 +1,10 @@
+
 /*======================================================================
  FILE: jniICalTimeType_cxx.h
  CREATOR: structConverter
-
  (C) COPYRIGHT 2002, Critical Path
-
- This library is free software; you can redistribute it and/or modify
- it under the terms of either:
-
-    The LGPL as published by the Free Software Foundation, version
-    2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.html
-
- Or:
-
-    The Mozilla Public License Version 2.0. You may obtain a copy of
-    the License at http://www.mozilla.org/MPL/
 ======================================================================*/
+
 #ifndef _jni_ICalTimeType_H
 #define _jni_ICalTimeType_H
 #include <jni.h>
@@ -42,6 +32,8 @@ void  jni_SetMinute_in_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv
 void jni_GetMinute_from_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);
 void  jni_SetSecond_in_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);
 void jni_GetSecond_from_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);
+void  jni_SetIs_utc_in_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);
+void jni_GetIs_utc_from_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);
 void  jni_SetIs_date_in_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);
 void jni_GetIs_date_from_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);
 void  jni_SetZone_in_ICalTimeType(struct ICalTimeType* __ICalTimeType_, JNIEnv *env, jobject thisICalTimeType);

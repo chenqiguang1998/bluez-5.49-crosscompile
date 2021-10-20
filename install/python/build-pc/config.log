@@ -266,7 +266,7 @@ configure: failed program was:
 configure:4040: result: no
 configure:4039: checking whether pthreads are available without options
 configure:4068: gcc -o conftest -g -O2   conftest.c  >&5
-/usr/bin/ld: /tmp/ccGADLmI.o: in function `main':
+/usr/bin/ld: /tmp/ccJZEbc4.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:18: undefined reference to `pthread_create'
 /usr/bin/ld: /home/chen/work/bluez/install/python/build-pc/conftest.c:20: undefined reference to `pthread_detach'
 collect2: error: ld returned 1 exit status
@@ -2442,7 +2442,7 @@ conftest.c: In function 'main':
 conftest.c:52:8: warning: implicit declaration of function 'makedev' [-Wimplicit-function-declaration]
    52 | return makedev(0, 0);
       |        ^~~~~~~
-/usr/bin/ld: /tmp/ccRtSuDh.o: in function `main':
+/usr/bin/ld: /tmp/ccwdRtQq.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:52: undefined reference to `makedev'
 collect2: error: ld returned 1 exit status
 configure:5109: $? = 1
@@ -2592,7 +2592,7 @@ conftest.c: In function 'main':
 conftest.c:53:2: warning: implicit declaration of function 'makedev' [-Wimplicit-function-declaration]
    53 |  makedev(0, 0)
       |  ^~~~~~~
-/usr/bin/ld: /tmp/ccHA3XSf.o: in function `main':
+/usr/bin/ld: /tmp/ccrux6XW.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:53: undefined reference to `makedev'
 collect2: error: ld returned 1 exit status
 configure:5559: $? = 1
@@ -2658,7 +2658,7 @@ conftest.c: In function 'main':
 conftest.c:56:2: warning: implicit declaration of function 'makedev' [-Wimplicit-function-declaration]
    56 |  makedev(0, 0)
       |  ^~~~~~~
-/usr/bin/ld: /tmp/cc0qidIu.o: in function `main':
+/usr/bin/ld: /tmp/ccPxa9Do.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:56: undefined reference to `makedev'
 collect2: error: ld returned 1 exit status
 configure:5610: $? = 1
@@ -3140,7 +3140,7 @@ configure: failed program was:
 configure:10738: result: no
 configure:10752: checking for library containing sem_init
 configure:10782: gcc -o conftest -g -O2   conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/cc5JmcKz.o: in function `main':
+/usr/bin/ld: /tmp/cc06bLHM.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:81: undefined reference to `sem_init'
 collect2: error: ld returned 1 exit status
 configure:10788: $? = 1
@@ -3330,7 +3330,7 @@ configure: failed program was:
 configure:10945: result: no
 configure:11018: checking for t_open in -lnsl
 configure:11048: gcc -o conftest -g -O2   conftest.c -lnsl  -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/ccLlH3hH.o: in function `main':
+/usr/bin/ld: /tmp/cc3Z4Qtx.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:81: undefined reference to `t_open'
 collect2: error: ld returned 1 exit status
 configure:11054: $? = 1
@@ -3809,7 +3809,7 @@ configure:13620: $? = 0
 configure:13632: result: yes
 configure:13550: checking for getwd
 configure:13601: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/ccZxXxiM.o: in function `main':
+/usr/bin/ld: /tmp/ccXGYZjO.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:133: warning: the `getwd' function is dangerous and should not be used.
 configure:13607: $? = 0
 configure:13611: test -z 
@@ -3919,9 +3919,9 @@ configure:13620: $? = 0
 configure:13632: result: yes
 configure:13550: checking for plock
 configure:13601: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/ccJD7zBA.o: in function `main':
+/usr/bin/ld: /tmp/ccPKTHYr.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:145: undefined reference to `plock'
-/usr/bin/ld: /tmp/ccJD7zBA.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:136: undefined reference to `plock'
+/usr/bin/ld: /tmp/ccPKTHYr.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:136: undefined reference to `plock'
 collect2: error: ld returned 1 exit status
 configure:13607: $? = 1
 configure: failed program was:
@@ -4085,9 +4085,9 @@ configure:13620: $? = 0
 configure:13632: result: yes
 configure:13550: checking for pthread_init
 configure:13601: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/cc7TPijY.o: in function `main':
+/usr/bin/ld: /tmp/ccDCPO3g.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:146: undefined reference to `pthread_init'
-/usr/bin/ld: /tmp/cc7TPijY.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:137: undefined reference to `pthread_init'
+/usr/bin/ld: /tmp/ccDCPO3g.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:137: undefined reference to `pthread_init'
 collect2: error: ld returned 1 exit status
 configure:13607: $? = 1
 configure: failed program was:
@@ -4462,7 +4462,7 @@ configure:13620: $? = 0
 configure:13632: result: yes
 configure:13550: checking for tempnam
 configure:13601: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/ccHbllcQ.o: in function `main':
+/usr/bin/ld: /tmp/ccur7UBE.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:169: warning: the use of `tempnam' is dangerous, better use `mkstemp'
 configure:13607: $? = 0
 configure:13611: test -z 
@@ -4500,7 +4500,7 @@ configure:13620: $? = 0
 configure:13632: result: yes
 configure:13550: checking for tmpnam
 configure:13601: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/ccZFb647.o: in function `main':
+/usr/bin/ld: /tmp/ccM4NV1P.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:173: warning: the use of `tmpnam' is dangerous, better use `mkstemp'
 configure:13607: $? = 0
 configure:13611: test -z 
@@ -4511,7 +4511,7 @@ configure:13620: $? = 0
 configure:13632: result: yes
 configure:13550: checking for tmpnam_r
 configure:13601: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/ccdt5wS4.o: in function `main':
+/usr/bin/ld: /tmp/ccDtBDSA.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:174: warning: the use of `tmpnam_r' is dangerous, better use `mkstemp'
 configure:13607: $? = 0
 configure:13611: test -z 
@@ -4576,9 +4576,9 @@ configure:13620: $? = 0
 configure:13632: result: yes
 configure:13550: checking for _getpty
 configure:13601: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/ccrw7NYl.o: in function `main':
+/usr/bin/ld: /tmp/ccL0RhJ0.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:181: undefined reference to `_getpty'
-/usr/bin/ld: /tmp/ccrw7NYl.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:172: undefined reference to `_getpty'
+/usr/bin/ld: /tmp/ccL0RhJ0.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:172: undefined reference to `_getpty'
 collect2: error: ld returned 1 exit status
 configure:13607: $? = 1
 configure: failed program was:
@@ -5063,9 +5063,9 @@ configure:14575: $? = 0
 configure:14582: result: yes
 configure:14600: checking for openpty
 configure:14651: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  >&5
-/usr/bin/ld: /tmp/cciXPNNy.o: in function `main':
+/usr/bin/ld: /tmp/cctkmoNp.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:193: undefined reference to `openpty'
-/usr/bin/ld: /tmp/cciXPNNy.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:184: undefined reference to `openpty'
+/usr/bin/ld: /tmp/cctkmoNp.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:184: undefined reference to `openpty'
 collect2: error: ld returned 1 exit status
 configure:14657: $? = 1
 configure: failed program was:
@@ -5286,9 +5286,9 @@ configure:14912: $? = 0
 configure:14924: result: yes
 configure:15091: checking for fseek64
 configure:15142: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  -lutil >&5
-/usr/bin/ld: /tmp/ccGVYMHE.o: in function `main':
+/usr/bin/ld: /tmp/cc5Z6umL.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:195: undefined reference to `fseek64'
-/usr/bin/ld: /tmp/ccGVYMHE.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:186: undefined reference to `fseek64'
+/usr/bin/ld: /tmp/cc5Z6umL.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:186: undefined reference to `fseek64'
 collect2: error: ld returned 1 exit status
 configure:15148: $? = 1
 configure: failed program was:
@@ -5511,9 +5511,9 @@ configure:15161: $? = 0
 configure:15173: result: yes
 configure:15091: checking for ftell64
 configure:15142: gcc -pthread -o conftest -g -O2   conftest.c -lpthread -ldl  -lutil >&5
-/usr/bin/ld: /tmp/ccLVyba2.o: in function `main':
+/usr/bin/ld: /tmp/ccZl82Kj.o: in function `main':
 /home/chen/work/bluez/install/python/build-pc/conftest.c:197: undefined reference to `ftell64'
-/usr/bin/ld: /tmp/ccLVyba2.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:188: undefined reference to `ftell64'
+/usr/bin/ld: /tmp/ccZl82Kj.o:/home/chen/work/bluez/install/python/build-pc/conftest.c:188: undefined reference to `ftell64'
 collect2: error: ld returned 1 exit status
 configure:15148: $? = 1
 configure: failed program was:
@@ -9837,7 +9837,6 @@ on chen
 config.status:703: creating Makefile.pre
 config.status:703: creating Modules/Setup.config
 config.status:800: creating pyconfig.h
-config.status:1356: pyconfig.h is unchanged
 
 ## ---------------- ##
 ## Cache variables. ##

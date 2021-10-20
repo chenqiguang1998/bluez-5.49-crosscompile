@@ -1,0 +1,500 @@
+Determining if files sys/endian.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b394a/fast && /usr/bin/make -f CMakeFiles/cmTC_b394a.dir/build.make CMakeFiles/cmTC_b394a.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b394a.dir/HAVE_SYS_ENDIAN_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_b394a.dir/HAVE_SYS_ENDIAN_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c:2:24: fatal error: sys/endian.h: No such file or directory
+ #include <sys/endian.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_b394a.dir/build.make:66：CMakeFiles/cmTC_b394a.dir/HAVE_SYS_ENDIAN_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b394a/fast] 错误 2
+
+
+Source:
+/* */
+#include <sys/endian.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_174e2/fast && /usr/bin/make -f CMakeFiles/cmTC_174e2.dir/build.make CMakeFiles/cmTC_174e2.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_174e2.dir/src.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_174e2.dir/src.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_174e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_174e2.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_174e2.dir/src.c.o  -o cmTC_174e2 
+CMakeFiles/cmTC_174e2.dir/src.c.o: In function `main':
+src.c:(.text+0x2c): undefined reference to `pthread_create'
+src.c:(.text+0x34): undefined reference to `pthread_detach'
+src.c:(.text+0x3e): undefined reference to `pthread_join'
+src.c:(.text+0x48): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_174e2.dir/build.make:87：cmTC_174e2] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_174e2/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7cdfb/fast && /usr/bin/make -f CMakeFiles/cmTC_7cdfb.dir/build.make CMakeFiles/cmTC_7cdfb.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_7cdfb.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7cdfb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7cdfb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cdfb.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_7cdfb.dir/CheckFunctionExists.c.o  -o cmTC_7cdfb  -lpthreads 
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/../../../../arm-linux-gnueabihf/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_7cdfb.dir/build.make:87：cmTC_7cdfb] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_7cdfb/fast] 错误 2
+
+
+
+Determining if the function pthread_attr_get_np exists in the pthread failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5d80f/fast && /usr/bin/make -f CMakeFiles/cmTC_5d80f.dir/build.make CMakeFiles/cmTC_5d80f.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5d80f.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np   -o CMakeFiles/cmTC_5d80f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5d80f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d80f.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np    -rdynamic CMakeFiles/cmTC_5d80f.dir/CheckFunctionExists.c.o  -o cmTC_5d80f  -lpthread 
+CMakeFiles/cmTC_5d80f.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0xa): undefined reference to `pthread_attr_get_np'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5d80f.dir/build.make:87：cmTC_5d80f] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_5d80f/fast] 错误 2
+
+
+
+Determining if files pthread.h;pthread_np.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3a356/fast && /usr/bin/make -f CMakeFiles/cmTC_3a356.dir/build.make CMakeFiles/cmTC_3a356.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_3a356.dir/HAVE_PTHREAD_NP_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_3a356.dir/HAVE_PTHREAD_NP_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:3:24: fatal error: pthread_np.h: No such file or directory
+ #include <pthread_np.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_3a356.dir/build.make:66：CMakeFiles/cmTC_3a356.dir/HAVE_PTHREAD_NP_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_3a356/fast] 错误 2
+
+
+Source:
+/* */
+#include <pthread.h>
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/endian.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8b941/fast && /usr/bin/make -f CMakeFiles/cmTC_8b941.dir/build.make CMakeFiles/cmTC_8b941.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_8b941.dir/HAVE_SYS_ENDIAN_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_8b941.dir/HAVE_SYS_ENDIAN_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c:2:24: fatal error: sys/endian.h: No such file or directory
+ #include <sys/endian.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_8b941.dir/build.make:66：CMakeFiles/cmTC_8b941.dir/HAVE_SYS_ENDIAN_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_8b941/fast] 错误 2
+
+
+Source:
+/* */
+#include <sys/endian.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f890f/fast && /usr/bin/make -f CMakeFiles/cmTC_f890f.dir/build.make CMakeFiles/cmTC_f890f.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_f890f.dir/src.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f890f.dir/src.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f890f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f890f.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_f890f.dir/src.c.o  -o cmTC_f890f 
+CMakeFiles/cmTC_f890f.dir/src.c.o: In function `main':
+src.c:(.text+0x2c): undefined reference to `pthread_create'
+src.c:(.text+0x34): undefined reference to `pthread_detach'
+src.c:(.text+0x3e): undefined reference to `pthread_join'
+src.c:(.text+0x48): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f890f.dir/build.make:87：cmTC_f890f] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_f890f/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_432ee/fast && /usr/bin/make -f CMakeFiles/cmTC_432ee.dir/build.make CMakeFiles/cmTC_432ee.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_432ee.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_432ee.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_432ee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_432ee.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_432ee.dir/CheckFunctionExists.c.o  -o cmTC_432ee  -lpthreads 
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/../../../../arm-linux-gnueabihf/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_432ee.dir/build.make:87：cmTC_432ee] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_432ee/fast] 错误 2
+
+
+
+Determining if the function pthread_attr_get_np exists in the pthread failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_36c1c/fast && /usr/bin/make -f CMakeFiles/cmTC_36c1c.dir/build.make CMakeFiles/cmTC_36c1c.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_36c1c.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np   -o CMakeFiles/cmTC_36c1c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_36c1c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36c1c.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np    -rdynamic CMakeFiles/cmTC_36c1c.dir/CheckFunctionExists.c.o  -o cmTC_36c1c  -lpthread 
+CMakeFiles/cmTC_36c1c.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0xa): undefined reference to `pthread_attr_get_np'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_36c1c.dir/build.make:87：cmTC_36c1c] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_36c1c/fast] 错误 2
+
+
+
+Determining if files pthread.h;pthread_np.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f7f7c/fast && /usr/bin/make -f CMakeFiles/cmTC_f7f7c.dir/build.make CMakeFiles/cmTC_f7f7c.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_f7f7c.dir/HAVE_PTHREAD_NP_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_f7f7c.dir/HAVE_PTHREAD_NP_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:3:24: fatal error: pthread_np.h: No such file or directory
+ #include <pthread_np.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_f7f7c.dir/build.make:66：CMakeFiles/cmTC_f7f7c.dir/HAVE_PTHREAD_NP_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_f7f7c/fast] 错误 2
+
+
+Source:
+/* */
+#include <pthread.h>
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/endian.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c9711/fast && /usr/bin/make -f CMakeFiles/cmTC_c9711.dir/build.make CMakeFiles/cmTC_c9711.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c9711.dir/HAVE_SYS_ENDIAN_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_c9711.dir/HAVE_SYS_ENDIAN_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c:2:24: fatal error: sys/endian.h: No such file or directory
+ #include <sys/endian.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c9711.dir/build.make:66：CMakeFiles/cmTC_c9711.dir/HAVE_SYS_ENDIAN_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_c9711/fast] 错误 2
+
+
+Source:
+/* */
+#include <sys/endian.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4d702/fast && /usr/bin/make -f CMakeFiles/cmTC_4d702.dir/build.make CMakeFiles/cmTC_4d702.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_4d702.dir/src.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4d702.dir/src.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4d702
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d702.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_4d702.dir/src.c.o  -o cmTC_4d702 
+CMakeFiles/cmTC_4d702.dir/src.c.o: In function `main':
+src.c:(.text+0x2c): undefined reference to `pthread_create'
+src.c:(.text+0x34): undefined reference to `pthread_detach'
+src.c:(.text+0x3e): undefined reference to `pthread_join'
+src.c:(.text+0x48): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4d702.dir/build.make:87：cmTC_4d702] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_4d702/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a213d/fast && /usr/bin/make -f CMakeFiles/cmTC_a213d.dir/build.make CMakeFiles/cmTC_a213d.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_a213d.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a213d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a213d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a213d.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a213d.dir/CheckFunctionExists.c.o  -o cmTC_a213d  -lpthreads 
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/../../../../arm-linux-gnueabihf/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a213d.dir/build.make:87：cmTC_a213d] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_a213d/fast] 错误 2
+
+
+
+Determining if the function pthread_attr_get_np exists in the pthread failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e8ca1/fast && /usr/bin/make -f CMakeFiles/cmTC_e8ca1.dir/build.make CMakeFiles/cmTC_e8ca1.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e8ca1.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np   -o CMakeFiles/cmTC_e8ca1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e8ca1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8ca1.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np    -rdynamic CMakeFiles/cmTC_e8ca1.dir/CheckFunctionExists.c.o  -o cmTC_e8ca1  -lpthread 
+CMakeFiles/cmTC_e8ca1.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0xa): undefined reference to `pthread_attr_get_np'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e8ca1.dir/build.make:87：cmTC_e8ca1] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_e8ca1/fast] 错误 2
+
+
+
+Determining if files pthread.h;pthread_np.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9a42e/fast && /usr/bin/make -f CMakeFiles/cmTC_9a42e.dir/build.make CMakeFiles/cmTC_9a42e.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_9a42e.dir/HAVE_PTHREAD_NP_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_9a42e.dir/HAVE_PTHREAD_NP_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:3:24: fatal error: pthread_np.h: No such file or directory
+ #include <pthread_np.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_9a42e.dir/build.make:66：CMakeFiles/cmTC_9a42e.dir/HAVE_PTHREAD_NP_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_9a42e/fast] 错误 2
+
+
+Source:
+/* */
+#include <pthread.h>
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/endian.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0f6e0/fast && /usr/bin/make -f CMakeFiles/cmTC_0f6e0.dir/build.make CMakeFiles/cmTC_0f6e0.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_0f6e0.dir/HAVE_SYS_ENDIAN_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_0f6e0.dir/HAVE_SYS_ENDIAN_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ENDIAN_H.c:2:24: fatal error: sys/endian.h: No such file or directory
+ #include <sys/endian.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_0f6e0.dir/build.make:66：CMakeFiles/cmTC_0f6e0.dir/HAVE_SYS_ENDIAN_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_0f6e0/fast] 错误 2
+
+
+Source:
+/* */
+#include <sys/endian.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a767c/fast && /usr/bin/make -f CMakeFiles/cmTC_a767c.dir/build.make CMakeFiles/cmTC_a767c.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_a767c.dir/src.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a767c.dir/src.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a767c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a767c.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_a767c.dir/src.c.o  -o cmTC_a767c 
+CMakeFiles/cmTC_a767c.dir/src.c.o: In function `main':
+src.c:(.text+0x2c): undefined reference to `pthread_create'
+src.c:(.text+0x34): undefined reference to `pthread_detach'
+src.c:(.text+0x3e): undefined reference to `pthread_join'
+src.c:(.text+0x48): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a767c.dir/build.make:87：cmTC_a767c] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_a767c/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_11033/fast && /usr/bin/make -f CMakeFiles/cmTC_11033.dir/build.make CMakeFiles/cmTC_11033.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_11033.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_11033.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_11033
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11033.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_11033.dir/CheckFunctionExists.c.o  -o cmTC_11033  -lpthreads 
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/../../../../arm-linux-gnueabihf/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_11033.dir/build.make:87：cmTC_11033] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_11033/fast] 错误 2
+
+
+
+Determining if the function pthread_attr_get_np exists in the pthread failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dcbd7/fast && /usr/bin/make -f CMakeFiles/cmTC_dcbd7.dir/build.make CMakeFiles/cmTC_dcbd7.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_dcbd7.dir/CheckFunctionExists.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc   -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np   -o CMakeFiles/cmTC_dcbd7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dcbd7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dcbd7.dir/link.txt --verbose=1
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc  -DCHECK_FUNCTION_EXISTS=pthread_attr_get_np    -rdynamic CMakeFiles/cmTC_dcbd7.dir/CheckFunctionExists.c.o  -o cmTC_dcbd7  -lpthread 
+CMakeFiles/cmTC_dcbd7.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0xa): undefined reference to `pthread_attr_get_np'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_dcbd7.dir/build.make:87：cmTC_dcbd7] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_dcbd7/fast] 错误 2
+
+
+
+Determining if files pthread.h;pthread_np.h exist failed with the following output:
+Change Dir: /home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_263c7/fast && /usr/bin/make -f CMakeFiles/cmTC_263c7.dir/build.make CMakeFiles/cmTC_263c7.dir/build
+make[1]: 进入目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_263c7.dir/HAVE_PTHREAD_NP_H.c.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_263c7.dir/HAVE_PTHREAD_NP_H.c.o   -c /home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+/home/chen/work/bluez/install/1libical/build/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:3:24: fatal error: pthread_np.h: No such file or directory
+ #include <pthread_np.h>
+                        ^
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_263c7.dir/build.make:66：CMakeFiles/cmTC_263c7.dir/HAVE_PTHREAD_NP_H.c.o] 错误 1
+make[1]: 离开目录“/home/chen/work/bluez/install/1libical/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_263c7/fast] 错误 2
+
+
+Source:
+/* */
+#include <pthread.h>
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+

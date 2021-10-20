@@ -738,13 +738,13 @@ configure:14181: checking for python
 configure:14199: found /usr/bin/python
 configure:14211: result: /usr/bin/python
 configure:14229: checking for python version
-configure:14236: result: 2.7
+configure:14236: result: 3.8
 configure:14248: checking for python platform
-configure:14255: result: linux2
+configure:14255: result: linux
 configure:14281: checking for python script directory
-configure:14316: result: ${prefix}/lib/python2.7/site-packages
+configure:14316: result: ${prefix}/lib/python3.8/site-packages
 configure:14325: checking for python extension module directory
-configure:14360: result: ${exec_prefix}/lib/python2.7/site-packages
+configure:14360: result: ${exec_prefix}/lib/python3.8/site-packages
 configure:14451: checking whether to build with code coverage support
 configure:14471: result: no
 configure:14790: checking size of char
@@ -2669,7 +2669,7 @@ configure:15675: $? = 0
 configure:15675: result: yes
 configure:15675: checking for issetugid
 configure:15675: arm-linux-gnueabihf-gcc -o conftest -fPIE -I/home/chen/work/bluez/build/include/ -I/home/chen/work/bluez/build/include/ -L/home/chen/work/bluez/build/lib conftest.c  >&5
-/tmp/ccZO2F94.o: In function `main':
+/tmp/ccQDu0F0.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `issetugid'
 collect2: error: ld returned 1 exit status
 configure:15675: $? = 1
@@ -3748,7 +3748,7 @@ configure: failed program was:
 configure:16332: result: no
 configure:16344: checking for getpeerucred
 configure:16344: arm-linux-gnueabihf-gcc -o conftest -fPIE -I/home/chen/work/bluez/build/include/ -I/home/chen/work/bluez/build/include/ -L/home/chen/work/bluez/build/lib conftest.c  >&5
-/tmp/ccFPhz7s.o: In function `main':
+/tmp/cc5fTuZn.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getpeerucred'
 collect2: error: ld returned 1 exit status
 configure:16344: $? = 1
@@ -3886,7 +3886,7 @@ configure: failed program was:
 configure:16344: result: no
 configure:16344: checking for getpeereid
 configure:16344: arm-linux-gnueabihf-gcc -o conftest -fPIE -I/home/chen/work/bluez/build/include/ -I/home/chen/work/bluez/build/include/ -L/home/chen/work/bluez/build/lib conftest.c  >&5
-/tmp/ccMH5HeP.o: In function `main':
+/tmp/ccJexwXK.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `getpeereid'
 collect2: error: ld returned 1 exit status
 configure:16344: $? = 1
@@ -4046,7 +4046,7 @@ configure:16523: $? = 0
 configure:16540: result: none required
 configure:16550: checking for library containing pthread_mutexattr_init
 configure:16581: arm-linux-gnueabihf-gcc -o conftest -fPIE -I/home/chen/work/bluez/build/include/ -I/home/chen/work/bluez/build/include/ -L/home/chen/work/bluez/build/lib conftest.c   >&5
-/tmp/ccirzu4L.o: In function `main':
+/tmp/ccDUsTMO.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `pthread_mutexattr_init'
 collect2: error: ld returned 1 exit status
 configure:16581: $? = 1
@@ -4486,7 +4486,7 @@ configure:17252: checking for sys/event.h
 configure:17252: result: no
 configure:17260: checking for kqueue
 configure:17260: arm-linux-gnueabihf-gcc -o conftest -fPIE -I/home/chen/work/bluez/build/include/ -I/home/chen/work/bluez/build/include/ -L/home/chen/work/bluez/build/lib conftest.c  >&5
-/tmp/cc1ZeKGZ.o: In function `main':
+/tmp/ccAKOFOZ.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `kqueue'
 collect2: error: ld returned 1 exit status
 configure:17260: $? = 1
@@ -7772,7 +7772,7 @@ conftest.c: In function 'main':
 conftest.c:151:1: warning: old-style function definition [-Wold-style-definition]
 conftest.c: At top level:
 cc1: warning: unrecognized command line option "-Wno-cast-function-type"
-/tmp/ccZR7frI.o: In function `main':
+/tmp/ccLI7lI7.o: In function `main':
 conftest.c:(.text+0x4): undefined reference to `_NSGetEnviron'
 collect2: error: ld returned 1 exit status
 configure:23885: $? = 1
@@ -8210,10 +8210,10 @@ am_cv_make_support_nested_variables=yes
 am_cv_pathless_PYTHON=python
 am_cv_prog_cc_c_o=yes
 am_cv_prog_tar_ustar=gnutar
-am_cv_python_platform=linux2
-am_cv_python_pyexecdir='${exec_prefix}/lib/python2.7/site-packages'
-am_cv_python_pythondir='${prefix}/lib/python2.7/site-packages'
-am_cv_python_version=2.7
+am_cv_python_platform=linux
+am_cv_python_pyexecdir='${exec_prefix}/lib/python3.8/site-packages'
+am_cv_python_pythondir='${prefix}/lib/python3.8/site-packages'
+am_cv_python_version=3.8
 ax_cv_check_cflags__Wall=yes
 ax_cv_check_cflags__Warray_bounds=yes
 ax_cv_check_cflags__Wcast_align=yes
@@ -8569,9 +8569,9 @@ PATH_SEPARATOR=':'
 PKG_CONFIG='/usr/bin/pkg-config'
 PYTHON='/usr/bin/python'
 PYTHON_EXEC_PREFIX='${exec_prefix}'
-PYTHON_PLATFORM='linux2'
+PYTHON_PLATFORM='linux'
 PYTHON_PREFIX='${prefix}'
-PYTHON_VERSION='2.7'
+PYTHON_VERSION='3.8'
 RANLIB='arm-linux-gnueabihf-ranlib'
 RC=''
 R_DYNAMIC_LDFLAG=''
@@ -8659,8 +8659,8 @@ pkgpythondir='${pythondir}/dbus'
 prefix='/home/chen/work/bluez/build'
 program_transform_name='s,x,x,'
 psdir='${docdir}'
-pyexecdir='${exec_prefix}/lib/python2.7/site-packages'
-pythondir='${prefix}/lib/python2.7/site-packages'
+pyexecdir='${exec_prefix}/lib/python3.8/site-packages'
+pythondir='${prefix}/lib/python3.8/site-packages'
 runstatedir='${localstatedir}/run'
 sbindir='${exec_prefix}/sbin'
 sharedstatedir='${prefix}/com'

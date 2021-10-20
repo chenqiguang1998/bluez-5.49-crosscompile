@@ -1,25 +1,27 @@
+/* -*- Mode: C -*-*/
 /*======================================================================
   FILE: ical.i
 
-  (C) COPYRIGHT 1999 Eric Busboom <eric@softwarestudio.org>
+  (C) COPYRIGHT 1999 Eric Busboom
   http://www.softwarestudio.org
 
   This program is free software; you can redistribute it and/or modify
-  it under the terms of either:
+ it under the terms of either:
 
     The LGPL as published by the Free Software Foundation, version
-    2.1, available at: http://www.gnu.org/licenses/lgpl-2.1.html
+    2.1, available at: http://www.fsf.org/copyleft/lesser.html
 
   Or:
 
-    The Mozilla Public License Version 2.0. You may obtain a copy of
+    The Mozilla Public License Version 1.0. You may obtain a copy of
     the License at http://www.mozilla.org/MPL/
 
   The original author is Eric Busboom
 
   Contributions from:
   Graham Davison (g.m.davison@computer.org)
-  ======================================================================*/
+
+  ======================================================================*/  
 
 %module Net__ICal__Libical
 
@@ -53,22 +55,22 @@ void icalcomponent_convert_errors(icalcomponent* component);
 icalproperty* icalcomponent_get_current_property(icalcomponent* component);
 
 icalproperty* icalcomponent_get_first_property(icalcomponent* component,
-                          icalproperty_kind kind);
+					      icalproperty_kind kind);
 icalproperty* icalcomponent_get_next_property(icalcomponent* component,
-                          icalproperty_kind kind);
+					      icalproperty_kind kind);
 
 icalcomponent* icalcomponent_get_current_component (icalcomponent* component);
 
 icalcomponent* icalcomponent_get_first_component(icalcomponent* component,
-                          icalcomponent_kind kind);
+					      icalcomponent_kind kind);
 icalcomponent* icalcomponent_get_next_component(icalcomponent* component,
-                          icalcomponent_kind kind);
+					      icalcomponent_kind kind);
 
 void icalcomponent_add_property(icalcomponent* component,
-                icalproperty* property);
+				icalproperty* property);
 
 void icalcomponent_remove_property(icalcomponent* component,
-                   icalproperty* property);
+				   icalproperty* property);
 
 
 icalcomponent* icalcomponent_get_parent(icalcomponent* component);
@@ -79,7 +81,7 @@ int icalrestriction_check(icalcomponent* comp);
 
 
 /* actually returns icalproperty_kind */
-int icalproperty_string_to_kind(const char* string);
+int icalproperty_string_to_kind(const char* string); 
 
 /* actually takes icalproperty_kind */
 icalproperty* icalproperty_new(int kind);
@@ -100,10 +102,10 @@ const char* icalproperty_get_parameter_as_string(icalproperty* prop,
 icalcomponent* icalproperty_get_parent(icalproperty* property);
 
 typedef enum icalerrorenum {
-
+    
     ICAL_BADARG_ERROR,
     ICAL_NEWFAILED_ERROR,
-    ICAL_MALFORMEDDATA_ERROR,
+    ICAL_MALFORMEDDATA_ERROR, 
     ICAL_PARSE_ERROR,
     ICAL_INTERNAL_ERROR, /* Like assert --internal consist. prob */
     ICAL_FILE_ERROR,
@@ -115,7 +117,7 @@ typedef enum icalerrorenum {
 } icalerrorenum;
 
 /* Make an individual error fatal or non-fatal. */
-typedef enum icalererorstate {
+typedef enum icalererorstate { 
     ICAL_ERROR_FATAL,     /* Not fata */
     ICAL_ERROR_NONFATAL,  /* Fatal */
     ICAL_ERROR_DEFAULT,   /* Use the value of icalerror_errors_are_fatal*/
@@ -144,8 +146,8 @@ icalvalue_kind icalenum_property_kind_to_value_kind(icalproperty_kind kind);
 int* icallangbind_new_array(int size);
 void icallangbind_free_array(int* array);
 int icallangbind_access_array(int* array, int index);
-int icalrecur_expand_recurrence(const char* rule, int start,
-                                int count, int* array);
+int icalrecur_expand_recurrence(char* rule, int start, 
+				int count, int* array);
 
 
 /* Iterate through properties and components using strings for the kind */
@@ -166,32 +168,32 @@ icalcomponent* icallangbind_get_next_component(icalcomponent *c,
    generated a hash that holds the property's name, value and
    parameters. Sep is the hash seperation string, "=>" for perl and
    ":" for python */
-const char* icallangbind_property_eval_string(icalproperty* prop, const char* sep);
+const char* icallangbind_property_eval_string(icalproperty* prop, char* sep);
 
 /***********************************************************************
- Time routines
+ Time routines 
 ***********************************************************************/
 
 
 struct icaltimetype
 {
-    int year;
-    int month;
-    int day;
-    int hour;
-    int minute;
-    int second;
+	int year;
+	int month;
+	int day;
+	int hour;
+	int minute;
+	int second;
 
-    int is_utc; /* 1-> time is in UTC timezone */
+	int is_utc; /* 1-> time is in UTC timezone */
 
-    int is_date; /* 1 -> interpret this as date. */
-
-    const char* zone; /*Ptr to Olsen placename. Libical does not own mem*/
-};
+	int is_date; /* 1 -> interpret this as date. */
+   
+	const char* zone; /*Ptr to Olsen placename. Libical does not own mem*/
+};	
 
 
 /* Convert seconds past UNIX epoch to a timetype*/
-struct icaltimetype icaltime_from_timet_with_zone(int v, int is_date, const char* tzid);
+struct icaltimetype icaltime_from_timet(int v, int is_date);
 
 /* Return the time as seconds past the UNIX epoch */
 /* Normally, this returns a time_t, but SWIG tries to turn that type
@@ -213,11 +215,11 @@ int icaltime_utc_offset(struct icaltimetype tt, const char* tzid);
 /* convert tt, of timezone tzid, into a utc time. Does nothing if the
    time is already UTC.  */
 struct icaltimetype icaltime_as_utc(struct icaltimetype tt,
-                    const char* tzid);
+				    const char* tzid);
 
 /* convert tt, a time in UTC, into a time in timezone tzid */
 struct icaltimetype icaltime_as_zone(struct icaltimetype tt,
-                     const char* tzid);
+				     const char* tzid);
 
 /* Return a null time, which indicates no time has been set. This time represent the beginning of the epoch */
 struct icaltimetype icaltime_null_time(void);
@@ -246,9 +248,9 @@ struct icaltimetype icaltime_from_day_of_year(short doy,  short year);
 /* Return the day of the week of the given time. Sunday is 0 */
 short icaltime_day_of_week(struct icaltimetype t);
 
-/* Return the day of the year for the first day of the week that the
+/* Return the day of the year for the Sunday of the week that the
    given time is within. */
-short icaltime_start_doy_week(struct icaltimetype t, int fdow);
+short icaltime_start_doy_of_week(struct icaltimetype t);
 
 /* Return a string with the time represented in the same format as ctime(). THe string is owned by libical */
 char* icaltime_as_ctime(struct icaltimetype);
@@ -267,18 +269,18 @@ short icaltime_days_in_month(short month,short year);
 
 
 /***********************************************************************
-  Duration Routines
+  Duration Routines 
 ***********************************************************************/
 
 
 struct icaldurationtype
 {
-    int is_neg;
-    unsigned int days;
-    unsigned int weeks;
-    unsigned int hours;
-    unsigned int minutes;
-    unsigned int seconds;
+	int is_neg;
+	unsigned int days;
+	unsigned int weeks;
+	unsigned int hours;
+	unsigned int minutes;
+	unsigned int seconds;
 };
 
 struct icaldurationtype icaldurationtype_from_int(int t);
@@ -289,22 +291,22 @@ struct icaldurationtype icaldurationtype_null_duration();
 int icaldurationtype_is_null_duration(struct icaldurationtype d);
 
 struct icaltimetype  icaltime_add(struct icaltimetype t,
-                  struct icaldurationtype  d);
+				  struct icaldurationtype  d);
 
 struct icaldurationtype  icaltime_subtract(struct icaltimetype t1,
-                       struct icaltimetype t2);
+					   struct icaltimetype t2);
 
 
 /***********************************************************************
-  Period Routines
+  Period Routines 
 ***********************************************************************/
 
 
-struct icalperiodtype
+struct icalperiodtype 
 {
-    struct icaltimetype start;
-    struct icaltimetype end;
-    struct icaldurationtype duration;
+	struct icaltimetype start;
+	struct icaltimetype end;
+	struct icaldurationtype duration;
 };
 
 struct icalperiodtype icalperiodtype_from_string (const char* str);
@@ -313,3 +315,4 @@ const char* icalperiodtype_as_ical_string(struct icalperiodtype p);
 struct icalperiodtype icalperiodtype_null_period();
 int icalperiodtype_is_null_period(struct icalperiodtype p);
 int icalperiodtype_is_valid_period(struct icalperiodtype p);
+

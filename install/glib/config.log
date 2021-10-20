@@ -39,6 +39,9 @@ PATH: /usr/games
 PATH: /usr/local/games
 PATH: /snap/bin
 PATH: /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin
+PATH: /usr/local/install
+PATH: /usr/local/install/unicode/
+PATH: /usr/include/unicode/
 
 
 ## ----------- ##
@@ -588,13 +591,13 @@ configure:7330: checking for python
 configure:7348: found /usr/bin/python
 configure:7360: result: /usr/bin/python
 configure:7378: checking for python version
-configure:7385: result: 2.7
+configure:7385: result: 3.8
 configure:7397: checking for python platform
-configure:7404: result: linux2
+configure:7404: result: linux
 configure:7430: checking for python script directory
-configure:7465: result: ${prefix}/lib/python2.7/site-packages
+configure:7465: result: ${prefix}/lib/python3.8/site-packages
 configure:7474: checking for python extension module directory
-configure:7509: result: ${exec_prefix}/lib/python2.7/site-packages
+configure:7509: result: ${exec_prefix}/lib/python3.8/site-packages
 configure:7545: checking for iconv_open
 configure:7545: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c  >&5
 configure:7545: $? = 0
@@ -1048,7 +1051,7 @@ configure:17340: $? = 0
 configure:17340: result: yes
 configure:17340: checking for issetugid
 configure:17340: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccahrz7L.o: In function `main':
+/tmp/ccMh8SDL.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:82: undefined reference to `issetugid'
 collect2: error: ld returned 1 exit status
 configure:17340: $? = 1
@@ -4709,7 +4712,7 @@ configure:18530: $? = 0
 configure:18530: result: yes
 configure:18546: checking for sysctlbyname
 configure:18546: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cctbveUo.o: In function `main':
+/tmp/cctx1gdm.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:116: undefined reference to `sysctlbyname'
 collect2: error: ld returned 1 exit status
 configure:18546: $? = 1
@@ -7527,7 +7530,7 @@ configure:19387: $? = 0
 configure:19387: result: yes
 configure:19387: checking for fdwalk
 configure:19387: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cc0yE269.o: In function `main':
+/tmp/ccVFvOSi.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:142: undefined reference to `fdwalk'
 collect2: error: ld returned 1 exit status
 configure:19387: $? = 1
@@ -7877,7 +7880,7 @@ configure:19411: $? = 0
 configure:19411: result: yes
 configure:19411: checking for getfsstat
 configure:19411: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccLIdug1.o: In function `main':
+/tmp/ccuOCfG8.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:152: undefined reference to `getfsstat'
 collect2: error: ld returned 1 exit status
 configure:19411: $? = 1
@@ -8040,7 +8043,7 @@ configure: failed program was:
 configure:19411: result: no
 configure:19411: checking for getvfsstat
 configure:19411: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccdeIuuB.o: In function `main':
+/tmp/ccZHPHjw.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:152: undefined reference to `getvfsstat'
 collect2: error: ld returned 1 exit status
 configure:19411: $? = 1
@@ -8526,7 +8529,7 @@ configure:19511: checking for crt_externs.h
 configure:19511: result: no
 configure:19523: checking for _NSGetEnviron
 configure:19523: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cc87VoMx.o: In function `main':
+/tmp/cceoJ2YN.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:158: undefined reference to `_NSGetEnviron'
 collect2: error: ld returned 1 exit status
 configure:19523: $? = 1
@@ -10873,7 +10876,7 @@ configure:19710: $? = 0
 configure:19711: result: no
 configure:19742: checking for res_query
 configure:19761: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cct0yGtY.o: In function `main':
+/tmp/cckTWGFm.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:143: undefined reference to `__res_query'
 collect2: error: ld returned 1 exit status
 configure:19761: $? = 1
@@ -11474,7 +11477,7 @@ configure:20956: checking whether va_lists can be copied by value
 configure:20993: result: yes
 configure:21028: checking for dlopen
 configure:21028: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cc8fzgLS.o: In function `main':
+/tmp/ccBcur9o.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:188: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:21028: $? = 1
@@ -11673,7 +11676,7 @@ configure: failed program was:
 configure:21028: result: no
 configure:21041: checking for NSLinkModule
 configure:21041: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cce5rSX6.o: In function `main':
+/tmp/ccGxN9ct.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:188: undefined reference to `NSLinkModule'
 collect2: error: ld returned 1 exit status
 configure:21041: $? = 1
@@ -12307,7 +12310,7 @@ configure:22786: $? = 0
 configure:22787: result: yes
 configure:22798: checking for pthread_cond_timedwait_relative_np
 configure:22811: arm-linux-gnueabihf-gcc -o conftest -g -O2  -pthread   conftest.c -pthread   >&5
-/tmp/cc8h3Uhu.o: In function `main':
+/tmp/ccE3qqVf.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:167: undefined reference to `pthread_cond_timedwait_relative_np'
 collect2: error: ld returned 1 exit status
 configure:22811: $? = 1
@@ -19557,19 +19560,10 @@ configure:24736: $? = 0
 configure:24754: result: 4
 configure:24770: checking for DBUS1
 configure:24777: $PKG_CONFIG --exists --print-errors "dbus-1 >= 1.2.14"
-Package dbus-1 was not found in the pkg-config search path.
-Perhaps you should add the directory containing `dbus-1.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'dbus-1' found
-configure:24780: $? = 1
+configure:24780: $? = 0
 configure:24794: $PKG_CONFIG --exists --print-errors "dbus-1 >= 1.2.14"
-Package dbus-1 was not found in the pkg-config search path.
-Perhaps you should add the directory containing `dbus-1.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'dbus-1' found
-configure:24797: $? = 1
-configure:24811: result: no
-No package 'dbus-1' found
+configure:24797: $? = 0
+configure:24835: result: yes
 configure:24856: checking for dbus-daemon
 configure:24872: found /usr/bin/dbus-daemon
 configure:24883: result: dbus-daemon
@@ -19790,6 +19784,7 @@ configure: failed program was:
 | #define ALIGNOF_GUINT32 4
 | #define ALIGNOF_GUINT64 8
 | #define ALIGNOF_UNSIGNED_LONG 4
+| #define HAVE_DBUS1 1
 | #define _GLIB_EXTERN __attribute__((visibility("default"))) extern
 | /* end confdefs.h.  */
 | int a = 0; int main(void) { return a; }
@@ -19822,75 +19817,74 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on chen
 
-config.status:1884: creating glib-2.0.pc
-config.status:1884: creating gmodule-2.0.pc
-config.status:1884: creating gmodule-export-2.0.pc
-config.status:1884: creating gmodule-no-export-2.0.pc
-config.status:1884: creating gthread-2.0.pc
-config.status:1884: creating gobject-2.0.pc
-config.status:1884: creating gio-2.0.pc
-config.status:1884: creating gio-unix-2.0.pc
-config.status:1884: creating gio-windows-2.0.pc
-config.status:1884: creating glib-zip
-config.status:1884: creating glib-gettextize
-config.status:1884: creating Makefile
-config.status:1884: creating build/Makefile
-config.status:1884: creating build/win32/Makefile
-config.status:1884: creating build/win32/dirent/Makefile
-config.status:1884: creating build/win32/vs9/Makefile
-config.status:1884: creating build/win32/vs10/Makefile
-config.status:1884: creating build/win32/vs11/Makefile
-config.status:1884: creating build/win32/vs12/Makefile
-config.status:1884: creating glib/Makefile
-config.status:1884: creating glib/glib.stp
-config.status:1884: creating glib/libcharset/Makefile
-config.status:1884: creating glib/gnulib/Makefile
-config.status:1884: creating glib/pcre/Makefile
-config.status:1884: creating glib/update-pcre/Makefile
-config.status:1884: creating glib/tests/Makefile
-config.status:1884: creating gmodule/Makefile
-config.status:1884: creating gmodule/gmoduleconf.h
-config.status:1884: creating gobject/Makefile
-config.status:1884: creating gobject/gobject.stp
-config.status:1884: creating gobject/glib-mkenums
-config.status:1884: creating gobject/tests/Makefile
-config.status:1884: creating gthread/Makefile
-config.status:1884: creating gio/Makefile
-config.status:1884: creating gio/gdbus-2.0/codegen/Makefile
-config.status:1884: creating gio/gdbus-2.0/codegen/config.py
-config.status:1884: creating gio/gnetworking.h
-config.status:1884: creating gio/xdgmime/Makefile
-config.status:1884: creating gio/inotify/Makefile
-config.status:1884: creating gio/kqueue/Makefile
-config.status:1884: creating gio/fam/Makefile
-config.status:1884: creating gio/win32/Makefile
-config.status:1884: creating gio/tests/Makefile
-config.status:1884: creating gio/tests/gdbus-object-manager-example/Makefile
-config.status:1884: creating gio/tests/services/Makefile
-config.status:1884: creating gio/tests/services/org.gtk.GDBus.Examples.ObjectManager.service
-config.status:1884: creating gio/tests/modules/Makefile
-config.status:1884: creating po/Makefile.in
-config.status:1884: creating docs/Makefile
-config.status:1884: creating docs/reference/Makefile
-config.status:1884: creating docs/reference/glib/Makefile
-config.status:1884: creating docs/reference/glib/version.xml
-config.status:1884: creating docs/reference/gobject/Makefile
-config.status:1884: creating docs/reference/gobject/version.xml
-config.status:1884: creating docs/reference/gio/Makefile
-config.status:1884: creating docs/reference/gio/gdbus-object-manager-example/Makefile
-config.status:1884: creating docs/reference/gio/version.xml
-config.status:1884: creating tests/Makefile
-config.status:1884: creating tests/gobject/Makefile
-config.status:1884: creating tests/refcount/Makefile
-config.status:1884: creating m4macros/Makefile
-config.status:1884: creating config.h
-config.status:2065: config.h is unchanged
-config.status:2113: executing depfiles commands
-config.status:2113: executing default-1 commands
-config.status:2113: executing libtool commands
-config.status:2113: executing glib/glibconfig.h commands
-config.status:3253: glib/glibconfig.h is unchanged
-config.status:2113: executing chmod-scripts commands
+config.status:1885: creating glib-2.0.pc
+config.status:1885: creating gmodule-2.0.pc
+config.status:1885: creating gmodule-export-2.0.pc
+config.status:1885: creating gmodule-no-export-2.0.pc
+config.status:1885: creating gthread-2.0.pc
+config.status:1885: creating gobject-2.0.pc
+config.status:1885: creating gio-2.0.pc
+config.status:1885: creating gio-unix-2.0.pc
+config.status:1885: creating gio-windows-2.0.pc
+config.status:1885: creating glib-zip
+config.status:1885: creating glib-gettextize
+config.status:1885: creating Makefile
+config.status:1885: creating build/Makefile
+config.status:1885: creating build/win32/Makefile
+config.status:1885: creating build/win32/dirent/Makefile
+config.status:1885: creating build/win32/vs9/Makefile
+config.status:1885: creating build/win32/vs10/Makefile
+config.status:1885: creating build/win32/vs11/Makefile
+config.status:1885: creating build/win32/vs12/Makefile
+config.status:1885: creating glib/Makefile
+config.status:1885: creating glib/glib.stp
+config.status:1885: creating glib/libcharset/Makefile
+config.status:1885: creating glib/gnulib/Makefile
+config.status:1885: creating glib/pcre/Makefile
+config.status:1885: creating glib/update-pcre/Makefile
+config.status:1885: creating glib/tests/Makefile
+config.status:1885: creating gmodule/Makefile
+config.status:1885: creating gmodule/gmoduleconf.h
+config.status:1885: creating gobject/Makefile
+config.status:1885: creating gobject/gobject.stp
+config.status:1885: creating gobject/glib-mkenums
+config.status:1885: creating gobject/tests/Makefile
+config.status:1885: creating gthread/Makefile
+config.status:1885: creating gio/Makefile
+config.status:1885: creating gio/gdbus-2.0/codegen/Makefile
+config.status:1885: creating gio/gdbus-2.0/codegen/config.py
+config.status:1885: creating gio/gnetworking.h
+config.status:1885: creating gio/xdgmime/Makefile
+config.status:1885: creating gio/inotify/Makefile
+config.status:1885: creating gio/kqueue/Makefile
+config.status:1885: creating gio/fam/Makefile
+config.status:1885: creating gio/win32/Makefile
+config.status:1885: creating gio/tests/Makefile
+config.status:1885: creating gio/tests/gdbus-object-manager-example/Makefile
+config.status:1885: creating gio/tests/services/Makefile
+config.status:1885: creating gio/tests/services/org.gtk.GDBus.Examples.ObjectManager.service
+config.status:1885: creating gio/tests/modules/Makefile
+config.status:1885: creating po/Makefile.in
+config.status:1885: creating docs/Makefile
+config.status:1885: creating docs/reference/Makefile
+config.status:1885: creating docs/reference/glib/Makefile
+config.status:1885: creating docs/reference/glib/version.xml
+config.status:1885: creating docs/reference/gobject/Makefile
+config.status:1885: creating docs/reference/gobject/version.xml
+config.status:1885: creating docs/reference/gio/Makefile
+config.status:1885: creating docs/reference/gio/gdbus-object-manager-example/Makefile
+config.status:1885: creating docs/reference/gio/version.xml
+config.status:1885: creating tests/Makefile
+config.status:1885: creating tests/gobject/Makefile
+config.status:1885: creating tests/refcount/Makefile
+config.status:1885: creating m4macros/Makefile
+config.status:1885: creating config.h
+config.status:2114: executing depfiles commands
+config.status:2114: executing default-1 commands
+config.status:2114: executing libtool commands
+config.status:2114: executing glib/glibconfig.h commands
+config.status:3254: glib/glibconfig.h is unchanged
+config.status:2114: executing chmod-scripts commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -20161,10 +20155,10 @@ am_cv_make_support_nested_variables=yes
 am_cv_pathless_PYTHON=python
 am_cv_prog_cc_c_o=yes
 am_cv_prog_tar_ustar=gnutar
-am_cv_python_platform=linux2
-am_cv_python_pyexecdir='${exec_prefix}/lib/python2.7/site-packages'
-am_cv_python_pythondir='${prefix}/lib/python2.7/site-packages'
-am_cv_python_version=2.7
+am_cv_python_platform=linux
+am_cv_python_pyexecdir='${exec_prefix}/lib/python3.8/site-packages'
+am_cv_python_pythondir='${prefix}/lib/python3.8/site-packages'
+am_cv_python_version=3.8
 am_cv_val_LC_MESSAGES=yes
 bh_cv_c_signed=yes
 cc_cv_CFLAGS__Wall=yes
@@ -20253,6 +20247,8 @@ lt_cv_sys_max_cmd_len=1572864
 lt_cv_to_host_file_cmd=func_convert_file_noop
 lt_cv_to_tool_file_cmd=func_convert_file_noop
 lt_cv_truncate_bin='/usr/bin/dd bs=4096 count=1'
+pkg_cv_DBUS1_CFLAGS='-I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include'
+pkg_cv_DBUS1_LIBS=-ldbus-1
 pkg_cv_LIBFFI_CFLAGS=-I/home/chen/work/bluez/build/include
 pkg_cv_LIBFFI_LIBS='-lffi -L/home/chen/work/bluez/build/lib'
 pkg_cv_ZLIB_CFLAGS=-I/home/chen/work/bluez/build/include
@@ -20298,8 +20294,8 @@ CXXDEPMODE='depmode=gcc3'
 CXXFLAGS='-g -O2'
 CYGPATH_W='echo'
 DATADIRNAME='share'
-DBUS1_CFLAGS=''
-DBUS1_LIBS=''
+DBUS1_CFLAGS='-I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include'
+DBUS1_LIBS='-ldbus-1'
 DBUS_DAEMON='dbus-daemon'
 DEFS='-DHAVE_CONFIG_H'
 DEPDIR='.deps'
@@ -20384,8 +20380,8 @@ G_THREAD_LIBS_EXTRA=''
 G_THREAD_LIBS_FOR_GTHREAD='-lpthread'
 HAVE_CXX_FALSE='#'
 HAVE_CXX_TRUE=''
-HAVE_DBUS1_FALSE=''
-HAVE_DBUS1_TRUE='#'
+HAVE_DBUS1_FALSE='#'
+HAVE_DBUS1_TRUE=''
 HAVE_DBUS_DAEMON_FALSE='#'
 HAVE_DBUS_DAEMON_TRUE=''
 HAVE_EVENTFD_FALSE='#'
@@ -20499,9 +20495,9 @@ PO_IN_DATADIR_FALSE=''
 PO_IN_DATADIR_TRUE=''
 PYTHON='/usr/bin/python'
 PYTHON_EXEC_PREFIX='${exec_prefix}'
-PYTHON_PLATFORM='linux2'
+PYTHON_PLATFORM='linux'
 PYTHON_PREFIX='${prefix}'
-PYTHON_VERSION='2.7'
+PYTHON_VERSION='3.8'
 RANLIB='arm-linux-gnueabihf-ranlib'
 REBUILD=''
 SED='/usr/bin/sed'
@@ -20587,8 +20583,8 @@ pkgpythondir='${pythondir}/glib'
 prefix='/home/chen/work/bluez/build'
 program_transform_name='s,x,x,'
 psdir='${docdir}'
-pyexecdir='${exec_prefix}/lib/python2.7/site-packages'
-pythondir='${prefix}/lib/python2.7/site-packages'
+pyexecdir='${exec_prefix}/lib/python3.8/site-packages'
+pythondir='${prefix}/lib/python3.8/site-packages'
 sbindir='${exec_prefix}/sbin'
 sharedstatedir='${prefix}/com'
 sysconfdir='${prefix}/etc'
@@ -20765,6 +20761,7 @@ target_alias=''
 #define ALIGNOF_GUINT32 4
 #define ALIGNOF_GUINT64 8
 #define ALIGNOF_UNSIGNED_LONG 4
+#define HAVE_DBUS1 1
 #define _GLIB_EXTERN __attribute__((visibility("default"))) extern
 
 configure: exit 0
@@ -20784,5 +20781,5 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on chen
 
-config.status:2113: executing glib/glibconfig.h commands
-config.status:3253: glib/glibconfig.h is unchanged
+config.status:2114: executing glib/glibconfig.h commands
+config.status:3254: glib/glibconfig.h is unchanged
