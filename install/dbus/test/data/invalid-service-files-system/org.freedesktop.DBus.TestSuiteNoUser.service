@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.freedesktop.DBus.TestSuiteNoUser
+Exec=/home/chen/work/bluez/install/dbus/test/test-service

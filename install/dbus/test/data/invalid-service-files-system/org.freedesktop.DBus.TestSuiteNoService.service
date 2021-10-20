@@ -1,0 +1,4 @@
+[D-BUS Service]
+Exec=/home/chen/work/bluez/install/dbus/test/test-service
+User=anyrandomuser
+

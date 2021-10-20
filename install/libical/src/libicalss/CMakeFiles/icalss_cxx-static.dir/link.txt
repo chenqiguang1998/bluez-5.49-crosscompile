@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libicalss_cxx.a  CMakeFiles/icalss_cxx-static.dir/icalspanlist_cxx.cpp.o
+/usr/bin/ranlib ../../lib/libicalss_cxx.a

@@ -1,0 +1,9 @@
+xmlwf-codepage.o: codepage.c \
+ /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/stdc-predef.h \
+ codepage.h ../lib/internal.h
+
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/stdc-predef.h:
+
+codepage.h:
+
+../lib/internal.h:

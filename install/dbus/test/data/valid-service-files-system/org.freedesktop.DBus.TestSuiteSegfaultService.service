@@ -1,0 +1,5 @@
+[D-BUS Service]
+Name=org.freedesktop.DBus.TestSuiteSegfaultService
+Exec=/home/chen/work/bluez/install/dbus/test/test-segfault
+User=anyrandomuser
+
