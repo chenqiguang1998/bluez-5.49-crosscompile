@@ -47,15 +47,15 @@ DESTDIR =
 
 DEFS = -DHAVE_CONFIG_H
 CC = arm-linux-gnueabihf-gcc
-CFLAGS = -g -O
+CFLAGS = -fPIE -I/home/chen/work/bluez/build/include/
 LOCAL_CFLAGS =  -DREADLINE_LIBRARY -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
-CPPFLAGS = -P
+CPPFLAGS = -I/home/chen/work/bluez/build/include/
 
 INCLUDES = -I$(srcdir) -I$(top_srcdir) -I..
 
 CCFLAGS  = $(ASAN_CFLAGS) $(DEFS) $(LOCAL_CFLAGS) $(INCLUDES) $(CPPFLAGS) \
 	$(CFLAGS)
-LDFLAGS = -g -L..  -L./lib/termcap $(ASAN_LDFLAGS)
+LDFLAGS = -g -L.. -L/home/chen/work/bluez/build/lib $(ASAN_LDFLAGS)
 
 ASAN_XCFLAGS = -fsanitize=address -fno-omit-frame-pointer
 ASAN_XLDFLAGS = -fsanitize=address
@@ -63,7 +63,7 @@ ASAN_XLDFLAGS = -fsanitize=address
 READLINE_LIB = ../libreadline.a
 HISTORY_LIB = ../libhistory.a
 
-TERMCAP_LIB = -ltermcap
+TERMCAP_LIB = -lncurses
 
 .c.o:
 	${RM} $@

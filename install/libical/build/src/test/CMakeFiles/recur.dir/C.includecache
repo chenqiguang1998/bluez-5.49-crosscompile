@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/chen/work/bluez/install/1libical/src/test/recur.c
+/home/chen/work/bluez/install/libical/src/test/recur.c
 assert.h
 -
 string.h

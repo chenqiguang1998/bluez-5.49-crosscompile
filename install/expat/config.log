@@ -1183,7 +1183,7 @@ conftest.c: In function 'main':
 conftest.c:31:5: warning: implicit declaration of function 'arc4random_buf' [-Wimplicit-function-declaration]
      arc4random_buf(NULL, 0U);
      ^
-/tmp/ccTj6LeD.o: In function `main':
+/tmp/ccEzp06h.o: In function `main':
 /home/chen/work/bluez/install/expat/conftest.c:31: undefined reference to `arc4random_buf'
 collect2: error: ld returned 1 exit status
 configure:13593: $? = 1
@@ -1232,7 +1232,7 @@ conftest.c: In function 'main':
 conftest.c:32:11: warning: implicit declaration of function 'arc4random' [-Wimplicit-function-declaration]
            arc4random();
            ^
-/tmp/ccAbRLCC.o: In function `main':
+/tmp/ccnto2tg.o: In function `main':
 /home/chen/work/bluez/install/expat/conftest.c:32: undefined reference to `arc4random'
 collect2: error: ld returned 1 exit status
 configure:13619: $? = 1
@@ -1444,7 +1444,8 @@ configure:13995: result: no
 configure:13965: checking for docbook2man
 configure:13995: result: no
 configure:13965: checking for docbook-to-man
-configure:13995: result: no
+configure:13981: found /usr/bin/docbook-to-man
+configure:13992: result: docbook-to-man
 configure:14132: checking that generated files are newer than configure
 configure:14138: result: done
 configure:14190: creating ./config.status
@@ -1561,6 +1562,7 @@ ac_cv_prog_AWK=mawk
 ac_cv_prog_CC=arm-linux-gnueabihf-gcc
 ac_cv_prog_CPP='arm-linux-gnueabihf-gcc -E'
 ac_cv_prog_CXXCPP='arm-linux-gnueabihf-g++ -E'
+ac_cv_prog_DOCBOOK_TO_MAN=docbook-to-man
 ac_cv_prog_OBJDUMP=arm-linux-gnueabihf-objdump
 ac_cv_prog_RANLIB=arm-linux-gnueabihf-ranlib
 ac_cv_prog_STRIP=arm-linux-gnueabihf-strip
@@ -1667,7 +1669,7 @@ CYGPATH_W='echo'
 DEFS='-DHAVE_CONFIG_H'
 DEPDIR='.deps'
 DLLTOOL='false'
-DOCBOOK_TO_MAN=''
+DOCBOOK_TO_MAN='docbook-to-man'
 DSYMUTIL=''
 DUMPBIN=''
 ECHO_C=''
@@ -1721,8 +1723,8 @@ STRIP='arm-linux-gnueabihf-strip'
 UNICODE_FALSE=''
 UNICODE_TRUE='#'
 VERSION='2.2.7'
-WITH_DOCBOOK_FALSE=''
-WITH_DOCBOOK_TRUE='#'
+WITH_DOCBOOK_FALSE='#'
+WITH_DOCBOOK_TRUE=''
 WITH_EXAMPLES_FALSE='#'
 WITH_EXAMPLES_TRUE=''
 WITH_TESTS_FALSE='#'

@@ -1,8 +1,8 @@
-# Install script for directory: /home/chen/work/bluez/install/1libical/src
+# Install script for directory: /home/chen/work/bluez/install/libical/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/work/bluez/build")
+  set(CMAKE_INSTALL_PREFIX "/home/chen/work/bluez/build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chen/work/bluez/install/1libical/build/src/libical/cmake_install.cmake")
-  include("/home/chen/work/bluez/install/1libical/build/src/libicalss/cmake_install.cmake")
-  include("/home/chen/work/bluez/install/1libical/build/src/libicalvcal/cmake_install.cmake")
-  include("/home/chen/work/bluez/install/1libical/build/src/test/cmake_install.cmake")
+  include("/home/chen/work/bluez/install/libical/build/src/libical/cmake_install.cmake")
+  include("/home/chen/work/bluez/install/libical/build/src/libicalss/cmake_install.cmake")
+  include("/home/chen/work/bluez/install/libical/build/src/libicalvcal/cmake_install.cmake")
+  include("/home/chen/work/bluez/install/libical/build/src/test/cmake_install.cmake")
 
 endif()
 

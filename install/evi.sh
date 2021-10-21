@@ -1,7 +1,6 @@
 #!/bin/sh
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/home/chen/work/bluez/build/pkgconfig
+export PATH=/home/chen/work/bluez/build/bin:$PATH
 
-export PATH=$PATH:/home/chen/work/bluez/build/bin
+export PKG_CONFIG_PATH=/home/chen/work/bluez/build/lib/pkgconfig:$PKG_CONFIG_PATH
 
-export PKG_CONFIG_PATH=/home/work/bluez/build/pkgconfig:$PKG_CONFIG_PATH
-
+export LD_LIBRARY_PATH=/home/chen/work/bluez/build/lib:$LD_LIBRARY_PATH 

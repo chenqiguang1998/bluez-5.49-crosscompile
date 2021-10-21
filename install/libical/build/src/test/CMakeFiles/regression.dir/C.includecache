@@ -26,9 +26,9 @@ stdlib.h
 stdio.h
 -
 
-/home/chen/work/bluez/install/1libical/src/test/regression-classify.c
+/home/chen/work/bluez/install/libical/src/test/regression-classify.c
 config.h
-/home/chen/work/bluez/install/1libical/src/test/config.h
+/home/chen/work/bluez/install/libical/src/test/config.h
 stdio.h
 -
 errno.h
@@ -40,19 +40,19 @@ libical/ical.h
 libicalss/icalss.h
 -
 regression.h
-/home/chen/work/bluez/install/1libical/src/test/regression.h
+/home/chen/work/bluez/install/libical/src/test/regression.h
 
-/home/chen/work/bluez/install/1libical/src/test/regression-component.c
+/home/chen/work/bluez/install/libical/src/test/regression-component.c
 libical/ical.h
 -
 regression.h
-/home/chen/work/bluez/install/1libical/src/test/regression.h
+/home/chen/work/bluez/install/libical/src/test/regression.h
 string.h
 -
 
-/home/chen/work/bluez/install/1libical/src/test/regression-recur.c
+/home/chen/work/bluez/install/libical/src/test/regression-recur.c
 config.h
-/home/chen/work/bluez/install/1libical/src/test/config.h
+/home/chen/work/bluez/install/libical/src/test/config.h
 assert.h
 -
 string.h
@@ -72,11 +72,11 @@ libical/ical.h
 libicalss/icalss.h
 -
 regression.h
-/home/chen/work/bluez/install/1libical/src/test/regression.h
+/home/chen/work/bluez/install/libical/src/test/regression.h
 
-/home/chen/work/bluez/install/1libical/src/test/regression-storage.c
+/home/chen/work/bluez/install/libical/src/test/regression-storage.c
 config.h
-/home/chen/work/bluez/install/1libical/src/test/config.h
+/home/chen/work/bluez/install/libical/src/test/config.h
 assert.h
 -
 string.h
@@ -92,11 +92,11 @@ libical/ical.h
 libicalss/icalss.h
 -
 regression.h
-/home/chen/work/bluez/install/1libical/src/test/regression.h
+/home/chen/work/bluez/install/libical/src/test/regression.h
 db.h
 -
 
-/home/chen/work/bluez/install/1libical/src/test/regression-utils.c
+/home/chen/work/bluez/install/libical/src/test/regression-utils.c
 libical/ical.h
 -
 stdlib.h
@@ -104,9 +104,9 @@ stdlib.h
 string.h
 -
 
-/home/chen/work/bluez/install/1libical/src/test/regression.c
+/home/chen/work/bluez/install/libical/src/test/regression.c
 config.h
-/home/chen/work/bluez/install/1libical/src/test/config.h
+/home/chen/work/bluez/install/libical/src/test/config.h
 libical/ical.h
 -
 libicalss/icalss.h
@@ -118,7 +118,7 @@ libicalvcal/icalvcal.h
 libicalvcal/vcc.h
 -
 regression.h
-/home/chen/work/bluez/install/1libical/src/test/regression.h
+/home/chen/work/bluez/install/libical/src/test/regression.h
 assert.h
 -
 string.h
@@ -142,7 +142,7 @@ windows.h
 sys/types.h
 -
 
-/home/chen/work/bluez/install/1libical/src/test/regression.h
+/home/chen/work/bluez/install/libical/src/test/regression.h
 
 config.h
 

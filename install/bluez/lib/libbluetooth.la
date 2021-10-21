@@ -14,10 +14,10 @@ library_names='libbluetooth.so.3.18.16 libbluetooth.so.3 libbluetooth.so'
 old_library=''
 
 # Linker flags that can not go in dependency_libs.
-inherited_linker_flags=' -pthread'
+inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=''
+dependency_libs=' -L/home/chen/work/bluez/build/lib/'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

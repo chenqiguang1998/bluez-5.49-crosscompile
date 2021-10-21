@@ -1,8 +1,8 @@
-# Install script for directory: /home/chen/work/bluez/install/1libical/design-data
+# Install script for directory: /home/chen/work/bluez/install/libical/design-data
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/work/bluez/build")
+  set(CMAKE_INSTALL_PREFIX "/home/chen/work/bluez/build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

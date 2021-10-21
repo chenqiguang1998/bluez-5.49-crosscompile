@@ -6,5 +6,5 @@ C_FLAGS =  -Wno-deprecated -Wall -Wextra -Winit-self -Wmissing-include-dirs -Wun
 
 C_DEFINES = -DHAVE_CONFIG_H -Dicalss_EXPORTS
 
-C_INCLUDES = -I/home/chen/work/bluez/install/1libical/build -I/home/chen/work/bluez/install/1libical/src -I/home/chen/work/bluez/install/1libical/build/src -I/home/chen/work/bluez/install/1libical/src/libicalss -I/home/chen/work/bluez/install/1libical/build/src/libicalss -I/home/chen/work/bluez/install/1libical/src/libical -I/home/chen/work/bluez/install/1libical/build/src/libical 
+C_INCLUDES = -I/home/chen/work/bluez/install/libical/build -I/home/chen/work/bluez/install/libical/src -I/home/chen/work/bluez/install/libical/build/src -I/home/chen/work/bluez/install/libical/src/libicalss -I/home/chen/work/bluez/install/libical/build/src/libicalss -I/home/chen/work/bluez/install/libical/src/libical -I/home/chen/work/bluez/install/libical/build/src/libical 
 

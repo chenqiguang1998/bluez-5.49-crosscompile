@@ -2,10 +2,10 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Directory for the Android daemon storage files */
-#define ANDROID_STORAGEDIR "/home/chen/work/bluez/install/bluez/var/lib/bluetooth/android"
+#define ANDROID_STORAGEDIR "/home/chen/work/bluez/build/var/lib/bluetooth/android"
 
 /* Directory for the configuration files */
-#define CONFIGDIR "/home/chen/work/bluez/install/bluez/etc/bluetooth"
+#define CONFIGDIR "/home/chen/work/bluez/build/etc/bluetooth"
 
 /* Define to 1 if you have the backtrace support. */
 /* #undef HAVE_BACKTRACE_SUPPORT */
@@ -87,7 +87,7 @@
 #define STDC_HEADERS 1
 
 /* Directory for the storage files */
-#define STORAGEDIR "/home/chen/work/bluez/install/bluez/var/lib/bluetooth"
+#define STORAGEDIR "/home/chen/work/bluez/build/var/lib/bluetooth"
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE

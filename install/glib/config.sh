@@ -13,6 +13,12 @@ echo  glib_cv_have_strlcpy=no >> arm-linux.cache
 echo  glib_cv_have_qsort_r=yes >> arm-linux.cache
 echo  glib_cv_va_val_copy=yes >> arm-linux.cache
 echo  glib_cv_rtldglobal_broken=no >> arm-linux.cache
+echo  glib_cv_sane_realloc=yes >> arm-linux.cache
+echo  ac_cv_func_nonposix_getpwuid_r=no >> arm-linux.cache
+echo  glib_cv_use_pid_surrogate=no >> arm-linux.cache
+echo  ac_cv_func_printf_unix98=no >> arm-linux.cache
+echo  ac_cv_func_vsnprintf_c99=no >> arm-linux.cache
+echo  ac_cv_path_GLIB_COMPILE_SCHEMAS=yes >> arm-linux.cache
 
 
 

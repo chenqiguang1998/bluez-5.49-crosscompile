@@ -16,7 +16,7 @@
 
 	<key>ProgramArguments</key>
 	<array>
-		<string>/home/chen/work/bluez/build/bin/dbus-daemon</string>
+		<string>/bin/dbus-daemon</string>
 		<string>--nofork</string>
 		<string>--session</string>
 	</array>

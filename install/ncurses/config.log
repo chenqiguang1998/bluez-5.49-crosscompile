@@ -38,7 +38,7 @@ configure:1101: PATH=".;."; conftest.sh
 configure:1104: $? = 127
 configure:1117: checking for egrep
 configure:1127: result: grep -E
-configure:1141: result: Configuring NCURSES 5.9 ABI 5 (Wed Oct 20 13:45:42 CST 2021)
+configure:1141: result: Configuring NCURSES 5.9 ABI 5 (Thu Oct 21 15:51:42 CST 2021)
 configure:1246: checking build system type
 configure:1264: result: x86_64-unknown-linux-gnu
 configure:1271: checking host system type
@@ -264,11 +264,9 @@ configure:3464: result: yes
 configure:3476: checking if you want to use pkg-config
 configure:3486: result: yes
 configure:3497: checking for arm-linux-gnueabihf-pkg-config
-configure:3528: result: no
-configure:3537: checking for pkg-config
-configure:3554: found /usr/bin/pkg-config
-configure:3566: result: /usr/bin/pkg-config
-configure:3621: checking if we should install .pc files for /usr/bin/pkg-config
+configure:3514: found /usr/bin/arm-linux-gnueabihf-pkg-config
+configure:3525: result: /usr/bin/arm-linux-gnueabihf-pkg-config
+configure:3621: checking if we should install .pc files for /usr/bin/arm-linux-gnueabihf-pkg-config
 configure:3638: result: no
 configure:3649: checking if we should assume mixed-case filenames
 configure:3659: result: auto
@@ -818,7 +816,7 @@ configure:12514: $? = 0
 configure:12524: result: yes
 configure:12594: checking if -lm needed for math functions
 configure:12616: arm-linux-gnueabihf-gcc -o conftest -g -O2 -P -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64  -DNDEBUG  conftest.c  >&5
-/tmp/ccXHzB3h.o: In function `main':
+/tmp/ccwFncxW.o: In function `main':
 /home/chen/work/bluez/install/ncurses/configure:12609: undefined reference to `sin'
 collect2: error: ld returned 1 exit status
 configure:12619: $? = 1
@@ -1009,7 +1007,7 @@ configure:14218: $? = 0
 configure:14229: result: yes
 configure:14244: checking if external errno exists
 configure:14266: arm-linux-gnueabihf-gcc -o conftest -g -O2  --param max-inline-insns-single=1200 -P -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64  -DNDEBUG  conftest.c  >&5
-/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/../../../../arm-linux-gnueabihf/bin/ld: errno: TLS definition in /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../arm-linux-gnueabihf/libc/lib/libc.so.6 section .tbss mismatches non-TLS reference in /tmp/ccGoeNh8.o
+/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/../../../../arm-linux-gnueabihf/bin/ld: errno: TLS definition in /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../arm-linux-gnueabihf/libc/lib/libc.so.6 section .tbss mismatches non-TLS reference in /tmp/ccTtDjAJ.o
 /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/../arm-linux-gnueabihf/libc/lib/libc.so.6: error adding symbols: Bad value
 collect2: error: ld returned 1 exit status
 configure:14269: $? = 1
@@ -1060,7 +1058,7 @@ configure:14464: $? = 0
 configure:14474: result: yes
 configure:14418: checking for issetugid
 configure:14455: arm-linux-gnueabihf-gcc -o conftest -g -O2  --param max-inline-insns-single=1200 -P -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64  -DNDEBUG  conftest.c  >&5
-/tmp/cc45xyDV.o: In function `main':
+/tmp/ccSC8Gq0.o: In function `main':
 /home/chen/work/bluez/install/ncurses/configure:14446: undefined reference to `issetugid'
 /home/chen/work/bluez/install/ncurses/configure:14446: undefined reference to `issetugid'
 collect2: error: ld returned 1 exit status
@@ -1551,6 +1549,7 @@ config.status:20160: creating misc/ncurses-config
 config.status:20160: creating man/ncurses5-config.1
 config.status:20160: creating Makefile
 config.status:20257: creating include/ncurses_cfg.h
+config.status:20339: include/ncurses_cfg.h is unchanged
 
 ## ----------------- ##
 ## Cache variables.  ##
@@ -1652,8 +1651,8 @@ ac_cv_host_alias='arm-linux-gnueabihf'
 ac_cv_lib_dir_opendir='no'
 ac_cv_lib_util_openpty='yes'
 ac_cv_objext='o'
+ac_cv_path_PKG_CONFIG='/usr/bin/arm-linux-gnueabihf-pkg-config'
 ac_cv_path_TIC_PATH='/usr/bin/tic'
-ac_cv_path_ac_pt_PKG_CONFIG='/usr/bin/pkg-config'
 ac_cv_path_install='/usr/bin/install -c'
 ac_cv_prog_AR='arm-linux-gnueabihf-ar'
 ac_cv_prog_AWK='mawk'
@@ -1730,7 +1729,7 @@ cf_cv_src_modules='ncurses progs panel menu form'
 cf_cv_struct_dirent64='no'
 cf_cv_sys_time_select='yes'
 cf_cv_system_name='linux-gnueabihf'
-cf_cv_timestamp='Wed Oct 20 13:45:42 CST 2021'
+cf_cv_timestamp='Thu Oct 21 15:51:42 CST 2021'
 cf_cv_type_of_bool='unsigned'
 cf_cv_type_sigaction='no'
 cf_cv_typeof_chtype='long'

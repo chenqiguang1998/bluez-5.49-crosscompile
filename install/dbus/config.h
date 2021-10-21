@@ -5,7 +5,7 @@
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
 
 /* Directory for installing the binaries */
-#define DBUS_BINDIR "/home/chen/work/bluez/build/bin"
+#define DBUS_BINDIR "/bin"
 
 /* Define to build X11 functionality */
 /* #undef DBUS_BUILD_X11 */
@@ -30,13 +30,13 @@
 /* #undef DBUS_CYGWIN */
 
 /* Directory for installing the DBUS daemon */
-#define DBUS_DAEMONDIR "/home/chen/work/bluez/build/bin"
+#define DBUS_DAEMONDIR "/bin"
 
 /* Name of executable */
 #define DBUS_DAEMON_NAME "dbus-daemon"
 
 /* Directory for installing DBUS data files */
-#define DBUS_DATADIR "/home/chen/work/bluez/build/share"
+#define DBUS_DATADIR "/share"
 
 /* Disable assertion checking */
 #define DBUS_DISABLE_ASSERT 1
@@ -72,10 +72,10 @@
 #define DBUS_HAVE_LINUX_EPOLL 1
 
 /* Directory for installing the libexec binaries */
-#define DBUS_LIBEXECDIR "/home/chen/work/bluez/build/libexec"
+#define DBUS_LIBEXECDIR "/libexec"
 
 /* Prefix for installing DBUS */
-#define DBUS_PREFIX "/home/chen/work/bluez/build"
+#define DBUS_PREFIX ""
 
 /* Fallback address for session bus clients */
 #define DBUS_SESSION_BUS_CONNECT_ADDRESS "autolaunch:"
@@ -84,10 +84,10 @@
 #define DBUS_SESSION_SOCKET_DIR "/tmp"
 
 /* The default D-Bus address of the system bus */
-#define DBUS_SYSTEM_BUS_DEFAULT_ADDRESS "unix:path=/home/chen/work/bluez/build/var/run/dbus/system_bus_socket"
+#define DBUS_SYSTEM_BUS_DEFAULT_ADDRESS "unix:path=/var/run/dbus/system_bus_socket"
 
 /* The name of the socket the system bus listens on by default */
-#define DBUS_SYSTEM_SOCKET "/home/chen/work/bluez/build/var/run/dbus/system_bus_socket"
+#define DBUS_SYSTEM_SOCKET "/var/run/dbus/system_bus_socket"
 
 /* Full path to the launch helper test program in the builddir */
 #define DBUS_TEST_LAUNCH_HELPER_BINARY "/home/chen/work/bluez/install/dbus/bus/dbus-daemon-launch-helper-test"

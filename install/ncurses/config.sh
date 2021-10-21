@@ -7,4 +7,4 @@ export CPPFLAGS="-P"
  
 make
  
-make install
+make install 

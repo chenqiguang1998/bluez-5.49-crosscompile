@@ -213,7 +213,7 @@ CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
-DOCBOOK_TO_MAN = 
+DOCBOOK_TO_MAN = docbook-to-man
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -317,7 +317,7 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-#dist_man_MANS = xmlwf.1
+dist_man_MANS = xmlwf.1
 EXTRA_DIST = \
     expat.png \
     reference.html \
@@ -412,7 +412,7 @@ ctags CTAGS:
 
 cscope cscopelist:
 
-#dist-hook:
+dist-hook:
 
 distdir: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) distdir-am
@@ -575,13 +575,13 @@ uninstall-man: uninstall-man1
 
 .PHONY: dist-hook  # not inside conditional to avoid automake warning
 
-#xmlwf.1: xmlwf.xml
-#	-rm -f $@
-#	$(DOCBOOK_TO_MAN) $<
-#	test -f $@ || mv XMLWF.1 $@
-dist-hook:
-	@echo 'ERROR: Configure with --with-docbook for "make dist".' 1>&2
-	@false
+xmlwf.1: xmlwf.xml
+	-rm -f $@
+	$(DOCBOOK_TO_MAN) $<
+	test -f $@ || mv XMLWF.1 $@
+#dist-hook:
+#	@echo 'ERROR: Configure with --with-docbook for "make dist".' 1>&2
+#	@false
 
 # https://www.gnu.org/software/automake/manual/automake.html#What-Gets-Cleaned
 .PHONY: clean-local

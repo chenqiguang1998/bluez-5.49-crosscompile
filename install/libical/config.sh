@@ -23,7 +23,7 @@ if [ -f "CMakeCache.txt" ]; then
 rm -f CMakeCache.txt 
 fi  
 
-cmake .. -DCMAKE_INSTALL_PREFIX=/home/work/bluez/build    -DSHARED_ONLY=yes
+cmake .. -DCMAKE_INSTALL_PREFIX=/home/chen/work/bluez/build    -DSHARED_ONLY=yes
  
 #libical-2.0.0$
 make && make install&&cd -

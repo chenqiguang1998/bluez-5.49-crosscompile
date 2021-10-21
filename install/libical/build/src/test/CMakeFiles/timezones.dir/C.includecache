@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/chen/work/bluez/install/1libical/src/test/timezones.c
+/home/chen/work/bluez/install/libical/src/test/timezones.c
 config.h
-/home/chen/work/bluez/install/1libical/src/test/config.h
+/home/chen/work/bluez/install/libical/src/test/config.h
 libical/ical.h
 -
 time.h

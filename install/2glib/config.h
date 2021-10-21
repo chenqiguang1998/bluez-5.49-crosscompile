@@ -106,7 +106,7 @@
 /* #undef HAVE_CRT_EXTERNS_H */
 
 /* Define if dbus-1 is available */
-#define HAVE_DBUS1 1
+/* #undef HAVE_DBUS1 */
 
 /* Define to 1 if you have the `dcgettext' function. */
 #define HAVE_DCGETTEXT 1

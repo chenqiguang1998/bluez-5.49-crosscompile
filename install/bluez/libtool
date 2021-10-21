@@ -53,7 +53,7 @@ build_libtool_libs=yes
 pic_mode=default
 
 # Whether or not to optimize for fast installation.
-fast_install=needless
+fast_install=yes
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/bash"
@@ -65,9 +65,9 @@ ECHO="printf %s\\n"
 PATH_SEPARATOR=":"
 
 # The host system.
-host_alias=arm-linux-gnueabi
-host=arm-unknown-linux-gnueabi
-host_os=linux-gnueabi
+host_alias=arm-linux-gnueabihf
+host=arm-unknown-linux-gnueabihf
+host_os=linux-gnueabihf
 
 # The build system.
 build_alias=
@@ -90,7 +90,7 @@ EGREP="/usr/bin/grep -E"
 FGREP="/usr/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="/usr/bin/arm-linux-gnueabi-nm -B"
+NM="/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-nm -B"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -120,7 +120,7 @@ to_host_file_cmd=func_convert_file_noop
 to_tool_file_cmd=func_convert_file_noop
 
 # An object symbol dumper.
-OBJDUMP="arm-linux-gnueabi-objdump"
+OBJDUMP="arm-linux-gnueabihf-objdump"
 
 # Method to check whether dependent libraries are shared objects.
 deplibs_check_method="pass_all"
@@ -141,7 +141,7 @@ DLLTOOL="false"
 sharedlib_from_linklib_cmd="printf %s\\n"
 
 # The archiver.
-AR="arm-linux-gnueabi-ar"
+AR="arm-linux-gnueabihf-ar"
 
 # Flags to create an archive.
 AR_FLAGS="cru"
@@ -150,10 +150,10 @@ AR_FLAGS="cru"
 archiver_list_spec="@"
 
 # A symbol stripping program.
-STRIP="arm-linux-gnueabi-strip"
+STRIP="arm-linux-gnueabihf-strip"
 
 # Commands used to install an old-style archive.
-RANLIB="arm-linux-gnueabi-ranlib"
+RANLIB="arm-linux-gnueabihf-ranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$tool_oldlib"
 old_postuninstall_cmds=""
 
@@ -161,7 +161,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="arm-linux-gnueabi-gcc"
+LTCC="arm-linux-gnueabihf-gcc  -L/home/chen/work/bluez/build/lib/ -I/home/chen/work/bluez/build/include"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
@@ -240,7 +240,7 @@ runpath_var=LD_RUN_PATH
 shlibpath_var=LD_LIBRARY_PATH
 
 # Is shlibpath searched before the hard-coded library search path?
-shlibpath_overrides_runpath=yes
+shlibpath_overrides_runpath=no
 
 # Format of library name prefix.
 libname_spec="lib\$name"
@@ -272,10 +272,10 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/usr/lib/gcc-cross/arm-linux-gnueabi/9 /usr/arm-linux-gnueabi/lib /lib/arm-linux-gnueabi /lib /usr/lib/arm-linux-gnueabi /usr/lib "
+sys_lib_search_path_spec="/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.4 /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/lib/gcc /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/lib /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/lib /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/lib "
 
 # Run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /lib32 /usr/lib32 /usr/lib "
 
 # Whether dlopen is supported.
 dlopen_support=unknown
@@ -287,12 +287,12 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Commands to strip libraries.
-old_striplib="arm-linux-gnueabi-strip --strip-debug"
-striplib="arm-linux-gnueabi-strip --strip-unneeded"
+old_striplib="arm-linux-gnueabihf-strip --strip-debug"
+striplib="arm-linux-gnueabihf-strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="/usr/arm-linux-gnueabi/bin/ld"
+LD="/usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/bin/ld"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -302,7 +302,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="arm-linux-gnueabi-gcc"
+CC="arm-linux-gnueabihf-gcc  -L/home/chen/work/bluez/build/lib/ -I/home/chen/work/bluez/build/include"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes

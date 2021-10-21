@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chen/work/bluez/install/1libical
+CMAKE_SOURCE_DIR = /home/chen/work/bluez/install/libical
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chen/work/bluez/install/1libical/build
+CMAKE_BINARY_DIR = /home/chen/work/bluez/install/libical/build
 
 # Include any dependencies generated for this target.
 include src/libicalvcal/CMakeFiles/icalvcal.dir/depend.make
@@ -59,55 +59,55 @@ include src/libicalvcal/CMakeFiles/icalvcal.dir/flags.make
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/icalvcal.c.o: src/libicalvcal/CMakeFiles/icalvcal.dir/flags.make
 src/libicalvcal/CMakeFiles/icalvcal.dir/icalvcal.c.o: ../src/libicalvcal/icalvcal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/icalvcal.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/icalvcal.c.o   -c /home/chen/work/bluez/install/1libical/src/libicalvcal/icalvcal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/icalvcal.c.o"
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/icalvcal.c.o   -c /home/chen/work/bluez/install/libical/src/libicalvcal/icalvcal.c
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/icalvcal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/icalvcal.dir/icalvcal.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/src/libicalvcal/icalvcal.c > CMakeFiles/icalvcal.dir/icalvcal.c.i
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/src/libicalvcal/icalvcal.c > CMakeFiles/icalvcal.dir/icalvcal.c.i
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/icalvcal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/icalvcal.dir/icalvcal.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/src/libicalvcal/icalvcal.c -o CMakeFiles/icalvcal.dir/icalvcal.c.s
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/src/libicalvcal/icalvcal.c -o CMakeFiles/icalvcal.dir/icalvcal.c.s
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vobject.c.o: src/libicalvcal/CMakeFiles/icalvcal.dir/flags.make
 src/libicalvcal/CMakeFiles/icalvcal.dir/vobject.c.o: ../src/libicalvcal/vobject.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vobject.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/vobject.c.o   -c /home/chen/work/bluez/install/1libical/src/libicalvcal/vobject.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vobject.c.o"
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/vobject.c.o   -c /home/chen/work/bluez/install/libical/src/libicalvcal/vobject.c
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vobject.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/icalvcal.dir/vobject.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/src/libicalvcal/vobject.c > CMakeFiles/icalvcal.dir/vobject.c.i
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/src/libicalvcal/vobject.c > CMakeFiles/icalvcal.dir/vobject.c.i
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vobject.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/icalvcal.dir/vobject.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/src/libicalvcal/vobject.c -o CMakeFiles/icalvcal.dir/vobject.c.s
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/src/libicalvcal/vobject.c -o CMakeFiles/icalvcal.dir/vobject.c.s
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcaltmp.c.o: src/libicalvcal/CMakeFiles/icalvcal.dir/flags.make
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcaltmp.c.o: ../src/libicalvcal/vcaltmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vcaltmp.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/vcaltmp.c.o   -c /home/chen/work/bluez/install/1libical/src/libicalvcal/vcaltmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vcaltmp.c.o"
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/vcaltmp.c.o   -c /home/chen/work/bluez/install/libical/src/libicalvcal/vcaltmp.c
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcaltmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/icalvcal.dir/vcaltmp.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/src/libicalvcal/vcaltmp.c > CMakeFiles/icalvcal.dir/vcaltmp.c.i
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/src/libicalvcal/vcaltmp.c > CMakeFiles/icalvcal.dir/vcaltmp.c.i
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcaltmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/icalvcal.dir/vcaltmp.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/src/libicalvcal/vcaltmp.c -o CMakeFiles/icalvcal.dir/vcaltmp.c.s
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/src/libicalvcal/vcaltmp.c -o CMakeFiles/icalvcal.dir/vcaltmp.c.s
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.o: src/libicalvcal/CMakeFiles/icalvcal.dir/flags.make
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.o: ../src/libicalvcal/vcc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/vcc.c.o   -c /home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.o"
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/icalvcal.dir/vcc.c.o   -c /home/chen/work/bluez/install/libical/src/libicalvcal/vcc.c
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/icalvcal.dir/vcc.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.c > CMakeFiles/icalvcal.dir/vcc.c.i
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/src/libicalvcal/vcc.c > CMakeFiles/icalvcal.dir/vcc.c.i
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/icalvcal.dir/vcc.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.c -o CMakeFiles/icalvcal.dir/vcc.c.s
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/src/libicalvcal/vcc.c -o CMakeFiles/icalvcal.dir/vcc.c.s
 
 # Object files for target icalvcal
 icalvcal_OBJECTS = \
@@ -126,9 +126,9 @@ lib/libicalvcal.so.1.0.1: src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.o
 lib/libicalvcal.so.1.0.1: src/libicalvcal/CMakeFiles/icalvcal.dir/build.make
 lib/libicalvcal.so.1.0.1: lib/libical.so.1.0.1
 lib/libicalvcal.so.1.0.1: src/libicalvcal/CMakeFiles/icalvcal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library ../../lib/libicalvcal.so"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/icalvcal.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && $(CMAKE_COMMAND) -E cmake_symlink_library ../../lib/libicalvcal.so.1.0.1 ../../lib/libicalvcal.so.1 ../../lib/libicalvcal.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library ../../lib/libicalvcal.so"
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/icalvcal.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && $(CMAKE_COMMAND) -E cmake_symlink_library ../../lib/libicalvcal.so.1.0.1 ../../lib/libicalvcal.so.1 ../../lib/libicalvcal.so
 
 lib/libicalvcal.so.1: lib/libicalvcal.so.1.0.1
 	@$(CMAKE_COMMAND) -E touch_nocreate lib/libicalvcal.so.1
@@ -142,10 +142,10 @@ src/libicalvcal/CMakeFiles/icalvcal.dir/build: lib/libicalvcal.so
 .PHONY : src/libicalvcal/CMakeFiles/icalvcal.dir/build
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/clean:
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalvcal && $(CMAKE_COMMAND) -P CMakeFiles/icalvcal.dir/cmake_clean.cmake
+	cd /home/chen/work/bluez/install/libical/build/src/libicalvcal && $(CMAKE_COMMAND) -P CMakeFiles/icalvcal.dir/cmake_clean.cmake
 .PHONY : src/libicalvcal/CMakeFiles/icalvcal.dir/clean
 
 src/libicalvcal/CMakeFiles/icalvcal.dir/depend:
-	cd /home/chen/work/bluez/install/1libical/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chen/work/bluez/install/1libical /home/chen/work/bluez/install/1libical/src/libicalvcal /home/chen/work/bluez/install/1libical/build /home/chen/work/bluez/install/1libical/build/src/libicalvcal /home/chen/work/bluez/install/1libical/build/src/libicalvcal/CMakeFiles/icalvcal.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chen/work/bluez/install/libical/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chen/work/bluez/install/libical /home/chen/work/bluez/install/libical/src/libicalvcal /home/chen/work/bluez/install/libical/build /home/chen/work/bluez/install/libical/build/src/libicalvcal /home/chen/work/bluez/install/libical/build/src/libicalvcal/CMakeFiles/icalvcal.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/libicalvcal/CMakeFiles/icalvcal.dir/depend
 

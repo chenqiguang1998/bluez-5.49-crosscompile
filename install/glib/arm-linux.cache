@@ -63,8 +63,8 @@ ac_cv_env_PCRE_LIBS_set=
 ac_cv_env_PCRE_LIBS_value=
 ac_cv_env_PKG_CONFIG_LIBDIR_set=
 ac_cv_env_PKG_CONFIG_LIBDIR_value=
-ac_cv_env_PKG_CONFIG_PATH_set=
-ac_cv_env_PKG_CONFIG_PATH_value=
+ac_cv_env_PKG_CONFIG_PATH_set=set
+ac_cv_env_PKG_CONFIG_PATH_value=/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:
 ac_cv_env_PKG_CONFIG_set=
 ac_cv_env_PKG_CONFIG_value=
 ac_cv_env_PYTHON_set=
@@ -115,6 +115,7 @@ ac_cv_func_memalign=${ac_cv_func_memalign=yes}
 ac_cv_func_memmem=${ac_cv_func_memmem=yes}
 ac_cv_func_mmap=${ac_cv_func_mmap=yes}
 ac_cv_func_newlocale=${ac_cv_func_newlocale=yes}
+ac_cv_func_nonposix_getpwuid_r=${ac_cv_func_nonposix_getpwuid_r=no}
 ac_cv_func_pipe2=${ac_cv_func_pipe2=yes}
 ac_cv_func_poll=${ac_cv_func_poll=yes}
 ac_cv_func_posix_getgrgid_r=${ac_cv_func_posix_getgrgid_r=yes}
@@ -217,17 +218,21 @@ ac_cv_objext=${ac_cv_objext=o}
 ac_cv_path_EGREP=${ac_cv_path_EGREP='/usr/bin/grep -E'}
 ac_cv_path_FGREP=${ac_cv_path_FGREP='/usr/bin/grep -F'}
 ac_cv_path_GLIB_COMPILE_RESOURCES=${ac_cv_path_GLIB_COMPILE_RESOURCES=/usr/bin/glib-compile-resources}
-ac_cv_path_GLIB_COMPILE_SCHEMAS=${ac_cv_path_GLIB_COMPILE_SCHEMAS=/usr/bin/glib-compile-schemas}
+ac_cv_path_GLIB_COMPILE_SCHEMAS=${ac_cv_path_GLIB_COMPILE_SCHEMAS=yes}
 ac_cv_path_GLIB_GENMARSHAL=${ac_cv_path_GLIB_GENMARSHAL=/usr/bin/glib-genmarshal}
 ac_cv_path_GMSGFMT=${ac_cv_path_GMSGFMT=/usr/bin/msgfmt}
 ac_cv_path_GREP=${ac_cv_path_GREP=/usr/bin/grep}
+ac_cv_path_GTKDOC_CHECK_PATH=${ac_cv_path_GTKDOC_CHECK_PATH=/usr/bin/gtkdoc-check}
+ac_cv_path_GTKDOC_MKPDF=${ac_cv_path_GTKDOC_MKPDF=/usr/bin/gtkdoc-mkpdf}
+ac_cv_path_GTKDOC_REBASE=${ac_cv_path_GTKDOC_REBASE=/usr/bin/gtkdoc-rebase}
 ac_cv_path_MSGFMT=${ac_cv_path_MSGFMT=/usr/bin/msgfmt}
 ac_cv_path_PERL_PATH=${ac_cv_path_PERL_PATH=/usr/bin/perl}
+ac_cv_path_PKG_CONFIG=${ac_cv_path_PKG_CONFIG=/usr/bin/arm-linux-gnueabihf-pkg-config}
 ac_cv_path_PYTHON=${ac_cv_path_PYTHON=/usr/bin/python}
 ac_cv_path_SED=${ac_cv_path_SED=/usr/bin/sed}
 ac_cv_path_XGETTEXT=${ac_cv_path_XGETTEXT=/usr/bin/xgettext}
-ac_cv_path_XMLCATALOG=${ac_cv_path_XMLCATALOG=no}
-ac_cv_path_ac_pt_PKG_CONFIG=${ac_cv_path_ac_pt_PKG_CONFIG=/usr/bin/pkg-config}
+ac_cv_path_XMLCATALOG=${ac_cv_path_XMLCATALOG=/usr/bin/xmlcatalog}
+ac_cv_path_XSLTPROC=${ac_cv_path_XSLTPROC=/usr/bin/xsltproc}
 ac_cv_path_install=${ac_cv_path_install='/usr/bin/install -c'}
 ac_cv_path_lt_DD=${ac_cv_path_lt_DD=/usr/bin/dd}
 ac_cv_path_mkdir=${ac_cv_path_mkdir=/usr/bin/mkdir}
@@ -238,6 +243,7 @@ ac_cv_prog_CPP=${ac_cv_prog_CPP='arm-linux-gnueabihf-gcc -E'}
 ac_cv_prog_CXX=${ac_cv_prog_CXX=arm-linux-gnueabihf-g++}
 ac_cv_prog_CXXCPP=${ac_cv_prog_CXXCPP='arm-linux-gnueabihf-g++ -E'}
 ac_cv_prog_DBUS_DAEMON=${ac_cv_prog_DBUS_DAEMON=dbus-daemon}
+ac_cv_prog_GTKDOC_CHECK=${ac_cv_prog_GTKDOC_CHECK=gtkdoc-check.test}
 ac_cv_prog_OBJDUMP=${ac_cv_prog_OBJDUMP=arm-linux-gnueabihf-objdump}
 ac_cv_prog_PERL=${ac_cv_prog_PERL=perl}
 ac_cv_prog_RANLIB=${ac_cv_prog_RANLIB=arm-linux-gnueabihf-ranlib}
@@ -308,8 +314,10 @@ glib_cv_langinfo_outdigit=${glib_cv_langinfo_outdigit=yes}
 glib_cv_langinfo_time=${glib_cv_langinfo_time=yes}
 glib_cv_long_long_format=${glib_cv_long_long_format=ll}
 glib_cv_rtldglobal_broken=${glib_cv_rtldglobal_broken=no}
+glib_cv_sane_realloc=${glib_cv_sane_realloc=yes}
 glib_cv_stack_grows=${glib_cv_stack_grows=no}
 glib_cv_uscore=${glib_cv_uscore=no}
+glib_cv_use_pid_surrogate=${glib_cv_use_pid_surrogate=no}
 glib_cv_va_copy=${glib_cv_va_copy=yes}
 glib_cv_va_val_copy=${glib_cv_va_val_copy=yes}
 glib_cv_value_AF_INET6=${glib_cv_value_AF_INET6=10}
@@ -368,8 +376,8 @@ lt_cv_sys_max_cmd_len=${lt_cv_sys_max_cmd_len=1572864}
 lt_cv_to_host_file_cmd=${lt_cv_to_host_file_cmd=func_convert_file_noop}
 lt_cv_to_tool_file_cmd=${lt_cv_to_tool_file_cmd=func_convert_file_noop}
 lt_cv_truncate_bin=${lt_cv_truncate_bin='/usr/bin/dd bs=4096 count=1'}
-pkg_cv_DBUS1_CFLAGS=${pkg_cv_DBUS1_CFLAGS='-I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include'}
-pkg_cv_DBUS1_LIBS=${pkg_cv_DBUS1_LIBS=-ldbus-1}
+pkg_cv_DBUS1_CFLAGS=${pkg_cv_DBUS1_CFLAGS='-I/usr/local/include/dbus-1.0 -I/usr/local/lib/dbus-1.0/include'}
+pkg_cv_DBUS1_LIBS=${pkg_cv_DBUS1_LIBS='-L/usr/local/lib -ldbus-1'}
 pkg_cv_LIBFFI_CFLAGS=${pkg_cv_LIBFFI_CFLAGS=-I/home/chen/work/bluez/build/include}
 pkg_cv_LIBFFI_LIBS=${pkg_cv_LIBFFI_LIBS='-lffi -L/home/chen/work/bluez/build/lib'}
 pkg_cv_ZLIB_CFLAGS=${pkg_cv_ZLIB_CFLAGS=-I/home/chen/work/bluez/build/include}

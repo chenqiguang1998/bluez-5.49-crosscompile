@@ -93,10 +93,10 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = arm-unknown-linux-gnueabihf
-#am__append_1 = \
-#	glib-mkenums.1 		\
-#	glib-genmarshal.1 	\
-#	gobject-query.1
+am__append_1 = \
+	glib-mkenums.1 		\
+	glib-genmarshal.1 	\
+	gobject-query.1
 
 subdir = docs/reference/gobject
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -202,8 +202,8 @@ CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DATADIRNAME = share
-DBUS1_CFLAGS = -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
-DBUS1_LIBS = -ldbus-1
+DBUS1_CFLAGS = -I/usr/local/include/dbus-1.0 -I/usr/local/lib/dbus-1.0/include
+DBUS1_LIBS = -L/usr/local/lib -ldbus-1
 DBUS_DAEMON = dbus-daemon
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -224,7 +224,7 @@ GIO_MODULE_DIR = ${libdir}/gio/modules
 GLIBC21 = yes
 GLIB_BINARY_AGE = 4503
 GLIB_COMPILE_RESOURCES = /usr/bin/glib-compile-resources
-GLIB_COMPILE_SCHEMAS = /usr/bin/glib-compile-schemas
+GLIB_COMPILE_SCHEMAS = yes
 GLIB_DEBUG_FLAGS = -DG_ENABLE_DEBUG
 GLIB_EXTRA_CFLAGS = 
 GLIB_GENMARSHAL = /usr/bin/glib-genmarshal
@@ -244,12 +244,12 @@ GOBJECT_LINK_FLAGS = -Wl,-z,nodelete
 GREP = /usr/bin/grep
 GSPAWN = gspawn.lo
 GTHREAD_COMPILE_IMPL_DEFINES = 
-GTKDOC_CHECK = 
-GTKDOC_CHECK_PATH = 
+GTKDOC_CHECK = gtkdoc-check.test
+GTKDOC_CHECK_PATH = /usr/bin/gtkdoc-check
 GTKDOC_DEPS_CFLAGS = 
 GTKDOC_DEPS_LIBS = 
-GTKDOC_MKPDF = 
-GTKDOC_REBASE = true
+GTKDOC_MKPDF = /usr/bin/gtkdoc-mkpdf
+GTKDOC_REBASE = /usr/bin/gtkdoc-rebase
 G_LIBS_EXTRA = 
 G_MODULE_BROKEN_RTLD_GLOBAL = 0
 G_MODULE_HAVE_DLERROR = 1
@@ -324,9 +324,9 @@ PCRE_REQUIRES =
 PCRE_WARN_CFLAGS =  -Wno-pointer-sign
 PERL = perl
 PERL_PATH = /usr/bin/perl
-PKG_CONFIG = /usr/bin/pkg-config
+PKG_CONFIG = /usr/bin/arm-linux-gnueabihf-pkg-config
 PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
+PKG_CONFIG_PATH = /home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:
 PLATFORMDEP = 
 POFILES =  af.po am.po an.po ar.po as.po ast.po az.po be.po be@latin.po bg.po bn.po bn_IN.po bs.po ca.po ca@valencia.po cs.po cy.po da.po de.po dz.po el.po en_CA.po en_GB.po en@shaw.po eo.po es.po et.po eu.po fa.po fi.po fr.po ga.po gl.po gu.po he.po hi.po hr.po hu.po hy.po id.po is.po it.po ja.po ka.po kk.po kn.po ko.po ku.po lt.po lv.po mai.po mg.po mk.po ml.po mn.po mr.po ms.po nb.po nds.po ne.po nl.po nn.po oc.po or.po pa.po pl.po ps.po pt.po pt_BR.po ro.po ru.po rw.po si.po sk.po sl.po sq.po sr.po sr@latin.po sr@ije.po sv.po ta.po te.po tg.po th.po tl.po tr.po ug.po tt.po uk.po vi.po wa.po xh.po yi.po zh_CN.po zh_HK.po zh_TW.po
 POSUB = po
@@ -351,9 +351,9 @@ WINDRES =
 WSPIAPI_INCLUDE = 
 XATTR_LIBS = 
 XGETTEXT = /usr/bin/xgettext
-XMLCATALOG = no
+XMLCATALOG = /usr/bin/xmlcatalog
 XML_CATALOG_FILE = /etc/xml/catalog
-XSLTPROC = 
+XSLTPROC = /usr/bin/xsltproc
 ZLIB_CFLAGS = -I/home/chen/work/bluez/build/include
 ZLIB_LIBS = -lz -L/home/chen/work/bluez/build/lib
 abs_builddir = /home/chen/work/bluez/install/glib/docs/reference/gobject
@@ -565,13 +565,13 @@ GTK_DOC_V_PDF_0 = @echo "  DOC   Building PDF";
 
 ########################################################################
 man_MANS = $(am__append_1)
-#XSLTPROC_FLAGS = \
-#        --nonet \
-#        --stringparam man.output.quietly 1 \
-#        --stringparam funcsynopsis.style ansi \
-#        --stringparam man.th.extra1.suppress 1 \
-#        --stringparam man.authors.section.enabled 0 \
-#        --stringparam man.copyright.section.enabled 0
+XSLTPROC_FLAGS = \
+        --nonet \
+        --stringparam man.output.quietly 1 \
+        --stringparam funcsynopsis.style ansi \
+        --stringparam man.th.extra1.suppress 1 \
+        --stringparam man.authors.section.enabled 0 \
+        --stringparam man.copyright.section.enabled 0
 
 all: all-am
 
@@ -992,12 +992,12 @@ uninstall-local:
 #
 # Require gtk-doc when making dist
 #
-#dist-check-gtkdoc: docs
-dist-check-gtkdoc:
-	@echo "*** gtk-doc is needed to run 'make dist'.         ***"
-	@echo "*** gtk-doc was not found when 'configure' ran.   ***"
-	@echo "*** please install gtk-doc and rerun 'configure'. ***"
-	@false
+dist-check-gtkdoc: docs
+#dist-check-gtkdoc:
+#	@echo "*** gtk-doc is needed to run 'make dist'.         ***"
+#	@echo "*** gtk-doc was not found when 'configure' ran.   ***"
+#	@echo "*** please install gtk-doc and rerun 'configure'. ***"
+#	@false
 
 dist-hook: dist-check-gtkdoc all-gtk-doc dist-hook-local
 	@mkdir $(distdir)/html
@@ -1010,8 +1010,8 @@ dist-hook: dist-check-gtkdoc all-gtk-doc dist-hook-local
 
 .PHONY : dist-hook-local docs
 
-#.xml.1:
-#	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_FLAGS) http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
+.xml.1:
+	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_FLAGS) http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
 
 CLEANFILES ?=
 

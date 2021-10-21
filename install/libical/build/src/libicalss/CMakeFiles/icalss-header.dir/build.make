@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chen/work/bluez/install/1libical
+CMAKE_SOURCE_DIR = /home/chen/work/bluez/install/libical
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chen/work/bluez/install/1libical/build
+CMAKE_BINARY_DIR = /home/chen/work/bluez/install/libical/build
 
 # Utility rule file for icalss-header.
 
@@ -57,8 +57,8 @@ src/libicalss/CMakeFiles/icalss-header: src/libicalss/icalss.h
 
 
 src/libicalss/icalss.h:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating icalss.h"
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalss && /usr/bin/cmake -DTOPS:FILEPATH=/home/chen/work/bluez/install/1libical -DTOPB:FILEPATH=/home/chen/work/bluez/install/1libical/build -DICAL_FILE_H_FILE:FILEPATH=/home/chen/work/bluez/install/1libical/build/src/libicalss/icalss.h -P /home/chen/work/bluez/install/1libical/src/libicalss/icalss_file.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating icalss.h"
+	cd /home/chen/work/bluez/install/libical/build/src/libicalss && /usr/bin/cmake -DTOPS:FILEPATH=/home/chen/work/bluez/install/libical -DTOPB:FILEPATH=/home/chen/work/bluez/install/libical/build -DICAL_FILE_H_FILE:FILEPATH=/home/chen/work/bluez/install/libical/build/src/libicalss/icalss.h -P /home/chen/work/bluez/install/libical/src/libicalss/icalss_file.cmake
 
 icalss-header: src/libicalss/CMakeFiles/icalss-header
 icalss-header: src/libicalss/icalss.h
@@ -72,10 +72,10 @@ src/libicalss/CMakeFiles/icalss-header.dir/build: icalss-header
 .PHONY : src/libicalss/CMakeFiles/icalss-header.dir/build
 
 src/libicalss/CMakeFiles/icalss-header.dir/clean:
-	cd /home/chen/work/bluez/install/1libical/build/src/libicalss && $(CMAKE_COMMAND) -P CMakeFiles/icalss-header.dir/cmake_clean.cmake
+	cd /home/chen/work/bluez/install/libical/build/src/libicalss && $(CMAKE_COMMAND) -P CMakeFiles/icalss-header.dir/cmake_clean.cmake
 .PHONY : src/libicalss/CMakeFiles/icalss-header.dir/clean
 
 src/libicalss/CMakeFiles/icalss-header.dir/depend:
-	cd /home/chen/work/bluez/install/1libical/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chen/work/bluez/install/1libical /home/chen/work/bluez/install/1libical/src/libicalss /home/chen/work/bluez/install/1libical/build /home/chen/work/bluez/install/1libical/build/src/libicalss /home/chen/work/bluez/install/1libical/build/src/libicalss/CMakeFiles/icalss-header.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chen/work/bluez/install/libical/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chen/work/bluez/install/libical /home/chen/work/bluez/install/libical/src/libicalss /home/chen/work/bluez/install/libical/build /home/chen/work/bluez/install/libical/build/src/libicalss /home/chen/work/bluez/install/libical/build/src/libicalss/CMakeFiles/icalss-header.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/libicalss/CMakeFiles/icalss-header.dir/depend
 

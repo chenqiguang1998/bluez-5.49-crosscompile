@@ -63,10 +63,10 @@ localedir = ${datarootdir}/locale
 # Support an alternate destination root directory for package building
 DESTDIR =
 
-CFLAGS = -g -O
+CFLAGS = -fPIE -I/home/chen/work/bluez/build/include/
 LOCAL_CFLAGS =  -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
-CPPFLAGS = -P
-LDFLAGS =  -L./lib/termcap  -g -O
+CPPFLAGS = -I/home/chen/work/bluez/build/include/
+LDFLAGS = -L/home/chen/work/bluez/build/lib  -fPIE -I/home/chen/work/bluez/build/include/
 
 DEFS = -DHAVE_CONFIG_H 
 LOCAL_DEFS = 
@@ -85,7 +85,7 @@ SHOBJ_LDFLAGS = -shared -Wl,-soname,$@
 SHOBJ_XLDFLAGS = 
 SHOBJ_LIBS = 
 
-SHLIB_XLDFLAGS =  -L./lib/termcap -Wl,-rpath,$(libdir) -Wl,-soname,`basename $@ $(SHLIB_MINOR)`
+SHLIB_XLDFLAGS = -L/home/chen/work/bluez/build/lib -Wl,-rpath,$(libdir) -Wl,-soname,`basename $@ $(SHLIB_MINOR)`
 SHLIB_LIBS = 
 
 SHLIB_DOT = .
@@ -97,7 +97,7 @@ SHLIB_DLLVERSION = $(SHLIB_MAJOR)
 
 SHLIB_STATUS = supported
 
-TERMCAP_LIB = -ltermcap
+TERMCAP_LIB = -lncurses
 
 # shared library versioning
 SHLIB_MAJOR=		8

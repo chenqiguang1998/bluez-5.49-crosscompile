@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/chen/work/bluez/install/1libical/examples/access_components.c
+/home/chen/work/bluez/install/libical/examples/access_components.c
 libical/ical.h
 -
 assert.h
@@ -20,7 +20,7 @@ stdio.h
 time.h
 -
 
-/home/chen/work/bluez/install/1libical/examples/access_properties_and_parameters.c
+/home/chen/work/bluez/install/libical/examples/access_properties_and_parameters.c
 libical/ical.h
 -
 string.h
@@ -28,17 +28,17 @@ string.h
 stdlib.h
 -
 
-/home/chen/work/bluez/install/1libical/examples/errors.c
+/home/chen/work/bluez/install/libical/examples/errors.c
 libical/ical.h
 -
 stdio.h
 -
 
-/home/chen/work/bluez/install/1libical/examples/main.c
+/home/chen/work/bluez/install/libical/examples/main.c
 libical/ical.h
 -
 
-/home/chen/work/bluez/install/1libical/examples/parse_text.c
+/home/chen/work/bluez/install/libical/examples/parse_text.c
 stdio.h
 -
 errno.h

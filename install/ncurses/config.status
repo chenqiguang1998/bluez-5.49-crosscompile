@@ -382,8 +382,8 @@ s,@INSTALL_DATA@,${INSTALL} -m 644,;t t
 s,@LINT@,,;t t
 s,@LINT_OPTS@,,;t t
 s,@LN_S@,ln -s -f,;t t
-s,@PKG_CONFIG@,/usr/bin/pkg-config,;t t
-s,@ac_pt_PKG_CONFIG@,/usr/bin/pkg-config,;t t
+s,@PKG_CONFIG@,/usr/bin/arm-linux-gnueabihf-pkg-config,;t t
+s,@ac_pt_PKG_CONFIG@,,;t t
 s,@PKG_CONFIG_LIBDIR@,/usr/lib/pkgconfig,;t t
 s,@SET_MAKE@,,;t t
 s,@CTAGS@,,;t t

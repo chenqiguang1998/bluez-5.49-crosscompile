@@ -39,9 +39,6 @@ PATH: /usr/games
 PATH: /usr/local/games
 PATH: /snap/bin
 PATH: /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin
-PATH: /usr/local/install
-PATH: /usr/local/install/unicode/
-PATH: /usr/include/unicode/
 
 
 ## ----------- ##
@@ -564,11 +561,8 @@ configure:6793: arm-linux-gnueabihf-gcc -c -g -O2  conftest.c >&5
 configure:6793: $? = 0
 configure:6801: result: 64
 configure:6898: checking for arm-linux-gnueabihf-pkg-config
-configure:6931: result: no
-configure:6941: checking for pkg-config
-configure:6959: found /usr/bin/pkg-config
-configure:6971: result: /usr/bin/pkg-config
-configure:6983: WARNING: using cross tools not prefixed with host triplet
+configure:6916: found /usr/bin/arm-linux-gnueabihf-pkg-config
+configure:6928: result: /usr/bin/arm-linux-gnueabihf-pkg-config
 configure:6996: checking pkg-config is at least version 0.16
 configure:6999: result: yes
 configure:7073: checking for gawk
@@ -739,6 +733,7 @@ configure:11250: result: no
 configure:11260: checking for mt
 configure:11276: found /usr/bin/mt
 configure:11287: result: mt
+configure:11299: WARNING: using cross tools not prefixed with host triplet
 configure:11310: checking if mt is a manifest tool
 configure:11316: mt '-?'
 configure:11324: result: no
@@ -1051,7 +1046,7 @@ configure:17340: $? = 0
 configure:17340: result: yes
 configure:17340: checking for issetugid
 configure:17340: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccMh8SDL.o: In function `main':
+/tmp/ccdo8ynx.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:82: undefined reference to `issetugid'
 collect2: error: ld returned 1 exit status
 configure:17340: $? = 1
@@ -4712,7 +4707,7 @@ configure:18530: $? = 0
 configure:18530: result: yes
 configure:18546: checking for sysctlbyname
 configure:18546: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cctx1gdm.o: In function `main':
+/tmp/ccIMHdOq.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:116: undefined reference to `sysctlbyname'
 collect2: error: ld returned 1 exit status
 configure:18546: $? = 1
@@ -7530,7 +7525,7 @@ configure:19387: $? = 0
 configure:19387: result: yes
 configure:19387: checking for fdwalk
 configure:19387: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccVFvOSi.o: In function `main':
+/tmp/ccPDjq5C.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:142: undefined reference to `fdwalk'
 collect2: error: ld returned 1 exit status
 configure:19387: $? = 1
@@ -7880,7 +7875,7 @@ configure:19411: $? = 0
 configure:19411: result: yes
 configure:19411: checking for getfsstat
 configure:19411: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccuOCfG8.o: In function `main':
+/tmp/ccItgzyu.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:152: undefined reference to `getfsstat'
 collect2: error: ld returned 1 exit status
 configure:19411: $? = 1
@@ -8043,7 +8038,7 @@ configure: failed program was:
 configure:19411: result: no
 configure:19411: checking for getvfsstat
 configure:19411: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccZHPHjw.o: In function `main':
+/tmp/ccqXWuXO.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:152: undefined reference to `getvfsstat'
 collect2: error: ld returned 1 exit status
 configure:19411: $? = 1
@@ -8529,7 +8524,7 @@ configure:19511: checking for crt_externs.h
 configure:19511: result: no
 configure:19523: checking for _NSGetEnviron
 configure:19523: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cceoJ2YN.o: In function `main':
+/tmp/cc40MqQ5.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:158: undefined reference to `_NSGetEnviron'
 collect2: error: ld returned 1 exit status
 configure:19523: $? = 1
@@ -10876,7 +10871,7 @@ configure:19710: $? = 0
 configure:19711: result: no
 configure:19742: checking for res_query
 configure:19761: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/cckTWGFm.o: In function `main':
+/tmp/cc2PEiWW.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:143: undefined reference to `__res_query'
 collect2: error: ld returned 1 exit status
 configure:19761: $? = 1
@@ -11477,7 +11472,7 @@ configure:20956: checking whether va_lists can be copied by value
 configure:20993: result: yes
 configure:21028: checking for dlopen
 configure:21028: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccBcur9o.o: In function `main':
+/tmp/cc65b3rc.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:188: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:21028: $? = 1
@@ -11676,7 +11671,7 @@ configure: failed program was:
 configure:21028: result: no
 configure:21041: checking for NSLinkModule
 configure:21041: arm-linux-gnueabihf-gcc -o conftest -g -O2   conftest.c   >&5
-/tmp/ccGxN9ct.o: In function `main':
+/tmp/cc8RmO0h.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:188: undefined reference to `NSLinkModule'
 collect2: error: ld returned 1 exit status
 configure:21041: $? = 1
@@ -12310,7 +12305,7 @@ configure:22786: $? = 0
 configure:22787: result: yes
 configure:22798: checking for pthread_cond_timedwait_relative_np
 configure:22811: arm-linux-gnueabihf-gcc -o conftest -g -O2  -pthread   conftest.c -pthread   >&5
-/tmp/ccE3qqVf.o: In function `main':
+/tmp/cc2i7C6J.o: In function `main':
 /home/chen/work/bluez/install/glib/conftest.c:167: undefined reference to `pthread_cond_timedwait_relative_np'
 collect2: error: ld returned 1 exit status
 configure:22811: $? = 1
@@ -16680,40 +16675,48 @@ configure:23550: checking for glib-genmarshal
 configure:23568: found /usr/bin/glib-genmarshal
 configure:23581: result: /usr/bin/glib-genmarshal
 configure:23595: checking for glib-compile-schemas
-configure:23613: found /usr/bin/glib-compile-schemas
-configure:23626: result: /usr/bin/glib-compile-schemas
+configure:23626: result: yes
 configure:23640: checking for glib-compile-resources
 configure:23658: found /usr/bin/glib-compile-resources
 configure:23671: result: /usr/bin/glib-compile-resources
 configure:23692: checking for gtk-doc
 configure:23695: $PKG_CONFIG --exists --print-errors "$gtk_doc_requires"
-Package gtk-doc was not found in the pkg-config search path.
-Perhaps you should add the directory containing `gtk-doc.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'gtk-doc' found
-configure:23698: $? = 1
-configure:23704: result: no
-configure:23710: WARNING:
-  You will not be able to create source packages with 'make dist'
-  because gtk-doc >= 1.20 is not found.
+configure:23698: $? = 0
+configure:23704: result: yes
 configure:23718: checking for gtkdoc-check
-configure:23748: result: no
+configure:23734: found /usr/bin/gtkdoc-check
+configure:23745: result: gtkdoc-check.test
 configure:23755: checking for gtkdoc-check
-configure:23788: result: no
+configure:23773: found /usr/bin/gtkdoc-check
+configure:23785: result: /usr/bin/gtkdoc-check
 configure:23797: checking for gtkdoc-rebase
-configure:23830: result: no
+configure:23815: found /usr/bin/gtkdoc-rebase
+configure:23827: result: /usr/bin/gtkdoc-rebase
 configure:23841: checking for gtkdoc-mkpdf
-configure:23874: result: no
+configure:23859: found /usr/bin/gtkdoc-mkpdf
+configure:23871: result: /usr/bin/gtkdoc-mkpdf
 configure:23899: checking whether to build gtk-doc documentation
 configure:23901: result: no
 configure:24072: checking for xsltproc
-configure:24105: result: no
+configure:24090: found /usr/bin/xsltproc
+configure:24102: result: /usr/bin/xsltproc
 configure:24136: checking for XML catalog (/etc/xml/catalog)
 configure:24139: result: found
 configure:24150: checking for xmlcatalog
-configure:24181: result: no
+configure:24168: found /usr/bin/xmlcatalog
+configure:24181: result: /usr/bin/xmlcatalog
+configure:24202: checking for DocBook XML DTD V4.1.2 in XML catalog
+configure:24205: $XMLCATALOG --noout "$XML_CATALOG_FILE" "-//OASIS//DTD DocBook XML V4.1.2//EN" >&2
+file:///usr/share/xml/docbook/schema/dtd/4.1.2/docbookx.dtd
+configure:24208: $? = 0
+configure:24210: result: found
+configure:24235: checking for DocBook XSL Stylesheets in XML catalog
+configure:24238: $XMLCATALOG --noout "$XML_CATALOG_FILE" "http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl" >&2
+file:///usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl
+configure:24241: $? = 0
+configure:24243: result: found
 configure:24274: checking whether to generate man pages
-configure:24283: result: no
+configure:24278: result: yes
 configure:24295: checking whether to include dtrace tracing support
 configure:24303: result: yes
 configure:24309: checking for dtrace
@@ -19817,74 +19820,74 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on chen
 
-config.status:1885: creating glib-2.0.pc
-config.status:1885: creating gmodule-2.0.pc
-config.status:1885: creating gmodule-export-2.0.pc
-config.status:1885: creating gmodule-no-export-2.0.pc
-config.status:1885: creating gthread-2.0.pc
-config.status:1885: creating gobject-2.0.pc
-config.status:1885: creating gio-2.0.pc
-config.status:1885: creating gio-unix-2.0.pc
-config.status:1885: creating gio-windows-2.0.pc
-config.status:1885: creating glib-zip
-config.status:1885: creating glib-gettextize
-config.status:1885: creating Makefile
-config.status:1885: creating build/Makefile
-config.status:1885: creating build/win32/Makefile
-config.status:1885: creating build/win32/dirent/Makefile
-config.status:1885: creating build/win32/vs9/Makefile
-config.status:1885: creating build/win32/vs10/Makefile
-config.status:1885: creating build/win32/vs11/Makefile
-config.status:1885: creating build/win32/vs12/Makefile
-config.status:1885: creating glib/Makefile
-config.status:1885: creating glib/glib.stp
-config.status:1885: creating glib/libcharset/Makefile
-config.status:1885: creating glib/gnulib/Makefile
-config.status:1885: creating glib/pcre/Makefile
-config.status:1885: creating glib/update-pcre/Makefile
-config.status:1885: creating glib/tests/Makefile
-config.status:1885: creating gmodule/Makefile
-config.status:1885: creating gmodule/gmoduleconf.h
-config.status:1885: creating gobject/Makefile
-config.status:1885: creating gobject/gobject.stp
-config.status:1885: creating gobject/glib-mkenums
-config.status:1885: creating gobject/tests/Makefile
-config.status:1885: creating gthread/Makefile
-config.status:1885: creating gio/Makefile
-config.status:1885: creating gio/gdbus-2.0/codegen/Makefile
-config.status:1885: creating gio/gdbus-2.0/codegen/config.py
-config.status:1885: creating gio/gnetworking.h
-config.status:1885: creating gio/xdgmime/Makefile
-config.status:1885: creating gio/inotify/Makefile
-config.status:1885: creating gio/kqueue/Makefile
-config.status:1885: creating gio/fam/Makefile
-config.status:1885: creating gio/win32/Makefile
-config.status:1885: creating gio/tests/Makefile
-config.status:1885: creating gio/tests/gdbus-object-manager-example/Makefile
-config.status:1885: creating gio/tests/services/Makefile
-config.status:1885: creating gio/tests/services/org.gtk.GDBus.Examples.ObjectManager.service
-config.status:1885: creating gio/tests/modules/Makefile
-config.status:1885: creating po/Makefile.in
-config.status:1885: creating docs/Makefile
-config.status:1885: creating docs/reference/Makefile
-config.status:1885: creating docs/reference/glib/Makefile
-config.status:1885: creating docs/reference/glib/version.xml
-config.status:1885: creating docs/reference/gobject/Makefile
-config.status:1885: creating docs/reference/gobject/version.xml
-config.status:1885: creating docs/reference/gio/Makefile
-config.status:1885: creating docs/reference/gio/gdbus-object-manager-example/Makefile
-config.status:1885: creating docs/reference/gio/version.xml
-config.status:1885: creating tests/Makefile
-config.status:1885: creating tests/gobject/Makefile
-config.status:1885: creating tests/refcount/Makefile
-config.status:1885: creating m4macros/Makefile
-config.status:1885: creating config.h
-config.status:2114: executing depfiles commands
-config.status:2114: executing default-1 commands
-config.status:2114: executing libtool commands
-config.status:2114: executing glib/glibconfig.h commands
-config.status:3254: glib/glibconfig.h is unchanged
-config.status:2114: executing chmod-scripts commands
+config.status:1886: creating glib-2.0.pc
+config.status:1886: creating gmodule-2.0.pc
+config.status:1886: creating gmodule-export-2.0.pc
+config.status:1886: creating gmodule-no-export-2.0.pc
+config.status:1886: creating gthread-2.0.pc
+config.status:1886: creating gobject-2.0.pc
+config.status:1886: creating gio-2.0.pc
+config.status:1886: creating gio-unix-2.0.pc
+config.status:1886: creating gio-windows-2.0.pc
+config.status:1886: creating glib-zip
+config.status:1886: creating glib-gettextize
+config.status:1886: creating Makefile
+config.status:1886: creating build/Makefile
+config.status:1886: creating build/win32/Makefile
+config.status:1886: creating build/win32/dirent/Makefile
+config.status:1886: creating build/win32/vs9/Makefile
+config.status:1886: creating build/win32/vs10/Makefile
+config.status:1886: creating build/win32/vs11/Makefile
+config.status:1886: creating build/win32/vs12/Makefile
+config.status:1886: creating glib/Makefile
+config.status:1886: creating glib/glib.stp
+config.status:1886: creating glib/libcharset/Makefile
+config.status:1886: creating glib/gnulib/Makefile
+config.status:1886: creating glib/pcre/Makefile
+config.status:1886: creating glib/update-pcre/Makefile
+config.status:1886: creating glib/tests/Makefile
+config.status:1886: creating gmodule/Makefile
+config.status:1886: creating gmodule/gmoduleconf.h
+config.status:1886: creating gobject/Makefile
+config.status:1886: creating gobject/gobject.stp
+config.status:1886: creating gobject/glib-mkenums
+config.status:1886: creating gobject/tests/Makefile
+config.status:1886: creating gthread/Makefile
+config.status:1886: creating gio/Makefile
+config.status:1886: creating gio/gdbus-2.0/codegen/Makefile
+config.status:1886: creating gio/gdbus-2.0/codegen/config.py
+config.status:1886: creating gio/gnetworking.h
+config.status:1886: creating gio/xdgmime/Makefile
+config.status:1886: creating gio/inotify/Makefile
+config.status:1886: creating gio/kqueue/Makefile
+config.status:1886: creating gio/fam/Makefile
+config.status:1886: creating gio/win32/Makefile
+config.status:1886: creating gio/tests/Makefile
+config.status:1886: creating gio/tests/gdbus-object-manager-example/Makefile
+config.status:1886: creating gio/tests/services/Makefile
+config.status:1886: creating gio/tests/services/org.gtk.GDBus.Examples.ObjectManager.service
+config.status:1886: creating gio/tests/modules/Makefile
+config.status:1886: creating po/Makefile.in
+config.status:1886: creating docs/Makefile
+config.status:1886: creating docs/reference/Makefile
+config.status:1886: creating docs/reference/glib/Makefile
+config.status:1886: creating docs/reference/glib/version.xml
+config.status:1886: creating docs/reference/gobject/Makefile
+config.status:1886: creating docs/reference/gobject/version.xml
+config.status:1886: creating docs/reference/gio/Makefile
+config.status:1886: creating docs/reference/gio/gdbus-object-manager-example/Makefile
+config.status:1886: creating docs/reference/gio/version.xml
+config.status:1886: creating tests/Makefile
+config.status:1886: creating tests/gobject/Makefile
+config.status:1886: creating tests/refcount/Makefile
+config.status:1886: creating m4macros/Makefile
+config.status:1886: creating config.h
+config.status:2115: executing depfiles commands
+config.status:2115: executing default-1 commands
+config.status:2115: executing libtool commands
+config.status:2115: executing glib/glibconfig.h commands
+config.status:3255: glib/glibconfig.h is unchanged
+config.status:2115: executing chmod-scripts commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -19942,8 +19945,8 @@ ac_cv_env_PCRE_LIBS_set=
 ac_cv_env_PCRE_LIBS_value=
 ac_cv_env_PKG_CONFIG_LIBDIR_set=
 ac_cv_env_PKG_CONFIG_LIBDIR_value=
-ac_cv_env_PKG_CONFIG_PATH_set=
-ac_cv_env_PKG_CONFIG_PATH_value=
+ac_cv_env_PKG_CONFIG_PATH_set=set
+ac_cv_env_PKG_CONFIG_PATH_value=/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:
 ac_cv_env_PKG_CONFIG_set=
 ac_cv_env_PKG_CONFIG_value=
 ac_cv_env_PYTHON_set=
@@ -19994,6 +19997,7 @@ ac_cv_func_memalign=yes
 ac_cv_func_memmem=yes
 ac_cv_func_mmap=yes
 ac_cv_func_newlocale=yes
+ac_cv_func_nonposix_getpwuid_r=no
 ac_cv_func_pipe2=yes
 ac_cv_func_poll=yes
 ac_cv_func_posix_getgrgid_r=yes
@@ -20096,17 +20100,21 @@ ac_cv_objext=o
 ac_cv_path_EGREP='/usr/bin/grep -E'
 ac_cv_path_FGREP='/usr/bin/grep -F'
 ac_cv_path_GLIB_COMPILE_RESOURCES=/usr/bin/glib-compile-resources
-ac_cv_path_GLIB_COMPILE_SCHEMAS=/usr/bin/glib-compile-schemas
+ac_cv_path_GLIB_COMPILE_SCHEMAS=yes
 ac_cv_path_GLIB_GENMARSHAL=/usr/bin/glib-genmarshal
 ac_cv_path_GMSGFMT=/usr/bin/msgfmt
 ac_cv_path_GREP=/usr/bin/grep
+ac_cv_path_GTKDOC_CHECK_PATH=/usr/bin/gtkdoc-check
+ac_cv_path_GTKDOC_MKPDF=/usr/bin/gtkdoc-mkpdf
+ac_cv_path_GTKDOC_REBASE=/usr/bin/gtkdoc-rebase
 ac_cv_path_MSGFMT=/usr/bin/msgfmt
 ac_cv_path_PERL_PATH=/usr/bin/perl
+ac_cv_path_PKG_CONFIG=/usr/bin/arm-linux-gnueabihf-pkg-config
 ac_cv_path_PYTHON=/usr/bin/python
 ac_cv_path_SED=/usr/bin/sed
 ac_cv_path_XGETTEXT=/usr/bin/xgettext
-ac_cv_path_XMLCATALOG=no
-ac_cv_path_ac_pt_PKG_CONFIG=/usr/bin/pkg-config
+ac_cv_path_XMLCATALOG=/usr/bin/xmlcatalog
+ac_cv_path_XSLTPROC=/usr/bin/xsltproc
 ac_cv_path_install='/usr/bin/install -c'
 ac_cv_path_lt_DD=/usr/bin/dd
 ac_cv_path_mkdir=/usr/bin/mkdir
@@ -20117,6 +20125,7 @@ ac_cv_prog_CPP='arm-linux-gnueabihf-gcc -E'
 ac_cv_prog_CXX=arm-linux-gnueabihf-g++
 ac_cv_prog_CXXCPP='arm-linux-gnueabihf-g++ -E'
 ac_cv_prog_DBUS_DAEMON=dbus-daemon
+ac_cv_prog_GTKDOC_CHECK=gtkdoc-check.test
 ac_cv_prog_OBJDUMP=arm-linux-gnueabihf-objdump
 ac_cv_prog_PERL=perl
 ac_cv_prog_RANLIB=arm-linux-gnueabihf-ranlib
@@ -20187,8 +20196,10 @@ glib_cv_langinfo_outdigit=yes
 glib_cv_langinfo_time=yes
 glib_cv_long_long_format=ll
 glib_cv_rtldglobal_broken=no
+glib_cv_sane_realloc=yes
 glib_cv_stack_grows=no
 glib_cv_uscore=no
+glib_cv_use_pid_surrogate=no
 glib_cv_va_copy=yes
 glib_cv_va_val_copy=yes
 glib_cv_value_AF_INET6=10
@@ -20247,8 +20258,8 @@ lt_cv_sys_max_cmd_len=1572864
 lt_cv_to_host_file_cmd=func_convert_file_noop
 lt_cv_to_tool_file_cmd=func_convert_file_noop
 lt_cv_truncate_bin='/usr/bin/dd bs=4096 count=1'
-pkg_cv_DBUS1_CFLAGS='-I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include'
-pkg_cv_DBUS1_LIBS=-ldbus-1
+pkg_cv_DBUS1_CFLAGS='-I/usr/local/include/dbus-1.0 -I/usr/local/lib/dbus-1.0/include'
+pkg_cv_DBUS1_LIBS='-L/usr/local/lib -ldbus-1'
 pkg_cv_LIBFFI_CFLAGS=-I/home/chen/work/bluez/build/include
 pkg_cv_LIBFFI_LIBS='-lffi -L/home/chen/work/bluez/build/lib'
 pkg_cv_ZLIB_CFLAGS=-I/home/chen/work/bluez/build/include
@@ -20294,8 +20305,8 @@ CXXDEPMODE='depmode=gcc3'
 CXXFLAGS='-g -O2'
 CYGPATH_W='echo'
 DATADIRNAME='share'
-DBUS1_CFLAGS='-I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include'
-DBUS1_LIBS='-ldbus-1'
+DBUS1_CFLAGS='-I/usr/local/include/dbus-1.0 -I/usr/local/lib/dbus-1.0/include'
+DBUS1_LIBS='-L/usr/local/lib -ldbus-1'
 DBUS_DAEMON='dbus-daemon'
 DEFS='-DHAVE_CONFIG_H'
 DEPDIR='.deps'
@@ -20315,8 +20326,8 @@ ENABLE_GTK_DOC_FALSE=''
 ENABLE_GTK_DOC_TRUE='#'
 ENABLE_INSTALLED_TESTS_FALSE=''
 ENABLE_INSTALLED_TESTS_TRUE='#'
-ENABLE_MAN_FALSE=''
-ENABLE_MAN_TRUE='#'
+ENABLE_MAN_FALSE='#'
+ENABLE_MAN_TRUE=''
 ENABLE_SYSTEMTAP_FALSE=''
 ENABLE_SYSTEMTAP_TRUE='#'
 ENABLE_TIMELOOP_FALSE='#'
@@ -20330,7 +20341,7 @@ GIO_MODULE_DIR='${libdir}/gio/modules'
 GLIBC21='yes'
 GLIB_BINARY_AGE='4503'
 GLIB_COMPILE_RESOURCES='/usr/bin/glib-compile-resources'
-GLIB_COMPILE_SCHEMAS='/usr/bin/glib-compile-schemas'
+GLIB_COMPILE_SCHEMAS='yes'
 GLIB_DEBUG_FLAGS='-DG_ENABLE_DEBUG'
 GLIB_EXTRA_CFLAGS=''
 GLIB_GENMARSHAL='/usr/bin/glib-genmarshal'
@@ -20350,12 +20361,12 @@ GOBJECT_LINK_FLAGS='-Wl,-z,nodelete'
 GREP='/usr/bin/grep'
 GSPAWN='gspawn.lo'
 GTHREAD_COMPILE_IMPL_DEFINES=''
-GTKDOC_CHECK=''
-GTKDOC_CHECK_PATH=''
+GTKDOC_CHECK='gtkdoc-check.test'
+GTKDOC_CHECK_PATH='/usr/bin/gtkdoc-check'
 GTKDOC_DEPS_CFLAGS=''
 GTKDOC_DEPS_LIBS=''
-GTKDOC_MKPDF=''
-GTKDOC_REBASE='true'
+GTKDOC_MKPDF='/usr/bin/gtkdoc-mkpdf'
+GTKDOC_REBASE='/usr/bin/gtkdoc-rebase'
 GTK_DOC_BUILD_HTML_FALSE='#'
 GTK_DOC_BUILD_HTML_TRUE=''
 GTK_DOC_BUILD_PDF_FALSE=''
@@ -20396,8 +20407,8 @@ HAVE_GNUC_VISIBILITY_FALSE='#'
 HAVE_GNUC_VISIBILITY_TRUE=''
 HAVE_GOOD_PRINTF_FALSE=''
 HAVE_GOOD_PRINTF_TRUE='#'
-HAVE_GTK_DOC_FALSE=''
-HAVE_GTK_DOC_TRUE='#'
+HAVE_GTK_DOC_FALSE='#'
+HAVE_GTK_DOC_TRUE=''
 HAVE_INOTIFY_FALSE='#'
 HAVE_INOTIFY_TRUE=''
 HAVE_KQUEUE_FALSE=''
@@ -20483,9 +20494,9 @@ PCRE_REQUIRES=''
 PCRE_WARN_CFLAGS=' -Wno-pointer-sign'
 PERL='perl'
 PERL_PATH='/usr/bin/perl'
-PKG_CONFIG='/usr/bin/pkg-config'
+PKG_CONFIG='/usr/bin/arm-linux-gnueabihf-pkg-config'
 PKG_CONFIG_LIBDIR=''
-PKG_CONFIG_PATH=''
+PKG_CONFIG_PATH='/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:/home/chen/work/bluez/build/lib/pkgconfig:'
 PLATFORMDEP=''
 PLATFORM_WIN32_FALSE=''
 PLATFORM_WIN32_TRUE='#'
@@ -20520,9 +20531,9 @@ WINDRES=''
 WSPIAPI_INCLUDE=''
 XATTR_LIBS=''
 XGETTEXT='/usr/bin/xgettext'
-XMLCATALOG='no'
+XMLCATALOG='/usr/bin/xmlcatalog'
 XML_CATALOG_FILE='/etc/xml/catalog'
-XSLTPROC=''
+XSLTPROC='/usr/bin/xsltproc'
 ZLIB_CFLAGS='-I/home/chen/work/bluez/build/include'
 ZLIB_LIBS='-lz -L/home/chen/work/bluez/build/lib'
 ac_ct_AR=''
@@ -20781,5 +20792,5 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on chen
 
-config.status:2114: executing glib/glibconfig.h commands
-config.status:3254: glib/glibconfig.h is unchanged
+config.status:2115: executing glib/glibconfig.h commands
+config.status:3255: glib/glibconfig.h is unchanged

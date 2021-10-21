@@ -11674,7 +11674,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="arm-linux-gnueabihf-g++"
+CC="arm-linux-gnueabihf-c++"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes

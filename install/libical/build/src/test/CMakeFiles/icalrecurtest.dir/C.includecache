@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/chen/work/bluez/install/1libical/src/test/icalrecur_test.c
+/home/chen/work/bluez/install/libical/src/test/icalrecur_test.c
 config.h
-/home/chen/work/bluez/install/1libical/src/test/config.h
+/home/chen/work/bluez/install/libical/src/test/config.h
 stdio.h
 -
 stdlib.h

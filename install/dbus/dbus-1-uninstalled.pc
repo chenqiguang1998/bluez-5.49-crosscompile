@@ -3,7 +3,7 @@ abs_top_srcdir=/home/chen/work/bluez/install/dbus
 prefix=
 exec_prefix=
 bindir=${exec_prefix}/bin
-system_bus_default_address=unix:path=/home/chen/work/bluez/build/var/run/dbus/system_bus_socket
+system_bus_default_address=unix:path=/var/run/dbus/system_bus_socket
 datarootdir=${prefix}/share
 datadir=${datarootdir}
 sysconfdir=${prefix}/etc

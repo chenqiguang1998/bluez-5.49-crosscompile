@@ -210,7 +210,7 @@ am__append_25 = gdbus-test-codegen-generated.[ch] gdbus-test-codegen-generated-d
 
 # -----------------------------------------------------------------------------
 #am__append_26 = win32-streams
-am__append_27 = gdbus-serialization
+#am__append_27 = gdbus-serialization
 am__append_28 = \
 	autoptr				\
 	$(NULL)
@@ -334,7 +334,7 @@ am__EXEEXT_3 = actions$(EXEEXT) \
 	gnotification$(EXEEXT) \
 	$(am__EXEEXT_1)
 #am__EXEEXT_4 = win32-streams$(EXEEXT)
-am__EXEEXT_5 = gdbus-serialization$(EXEEXT)
+#am__EXEEXT_5 = gdbus-serialization$(EXEEXT)
 am__EXEEXT_6 = autoptr$(EXEEXT) $(am__EXEEXT_1)
 am__EXEEXT_7 = appmonitor$(EXEEXT) async-close-output-stream$(EXEEXT) \
 	async-splice-output-stream$(EXEEXT) \
@@ -1025,11 +1025,11 @@ gdbus_proxy_well_known_name_DEPENDENCIES =  \
 	$(top_builddir)/glib/libglib-2.0.la $(am__DEPENDENCIES_1)
 am__gdbus_serialization_SOURCES_DIST = gdbus-serialization.c \
 	gdbus-tests.h gdbus-tests.c
-am_gdbus_serialization_OBJECTS = gdbus_serialization-gdbus-serialization.$(OBJEXT) \
-	gdbus_serialization-gdbus-tests.$(OBJEXT)
+#am_gdbus_serialization_OBJECTS = gdbus_serialization-gdbus-serialization.$(OBJEXT) \
+#	gdbus_serialization-gdbus-tests.$(OBJEXT)
 gdbus_serialization_OBJECTS = $(am_gdbus_serialization_OBJECTS)
-gdbus_serialization_DEPENDENCIES =  \
-	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
+#gdbus_serialization_DEPENDENCIES =  \
+#	$(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
 gdbus_serialization_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(gdbus_serialization_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
@@ -1839,14 +1839,14 @@ COCOA_LIBS =
 CONFIG_STATUS_DEPENDENCIES = $(top_srcdir)/po/LINGUAS
 CPP = arm-linux-gnueabihf-gcc -E
 CPPFLAGS =  -pthread
-CXX = arm-linux-gnueabihf-g++
-CXXCPP = arm-linux-gnueabihf-g++ -E
+CXX = arm-linux-gnueabihf-c++
+CXXCPP = arm-linux-gnueabihf-c++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DATADIRNAME = share
-DBUS1_CFLAGS = -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
-DBUS1_LIBS = -ldbus-1
+DBUS1_CFLAGS = 
+DBUS1_LIBS = 
 DBUS_DAEMON = dbus-daemon
 DEFS = -DG_LOG_DOMAIN=\"GLib-GIO\" -DTEST_SERVICES=\""$(abs_top_builddir)/gio/tests/services"\"
 DEPDIR = .deps
@@ -1866,11 +1866,11 @@ GIO = giounix.lo
 GIO_MODULE_DIR = ${libdir}/gio/modules
 GLIBC21 = yes
 GLIB_BINARY_AGE = 4503
-GLIB_COMPILE_RESOURCES = /usr/bin/glib-compile-resources
-GLIB_COMPILE_SCHEMAS = /usr/bin/glib-compile-schemas
+GLIB_COMPILE_RESOURCES = /home/chen/work/bluez/build/bin/glib-compile-resources
+GLIB_COMPILE_SCHEMAS = /home/chen/work/bluez/build/bin/glib-compile-schemas
 GLIB_DEBUG_FLAGS = -DG_ENABLE_DEBUG
 GLIB_EXTRA_CFLAGS = 
-GLIB_GENMARSHAL = /usr/bin/glib-genmarshal
+GLIB_GENMARSHAL = /home/chen/work/bluez/build/bin/glib-genmarshal
 GLIB_HIDDEN_VISIBILITY_CFLAGS = -fvisibility=hidden
 GLIB_INTERFACE_AGE = 0
 GLIB_LINK_FLAGS = -Wl,-Bsymbolic-functions
@@ -1887,12 +1887,12 @@ GOBJECT_LINK_FLAGS = -Wl,-z,nodelete
 GREP = /usr/bin/grep
 GSPAWN = gspawn.lo
 GTHREAD_COMPILE_IMPL_DEFINES = 
-GTKDOC_CHECK = 
-GTKDOC_CHECK_PATH = 
+GTKDOC_CHECK = gtkdoc-check.test
+GTKDOC_CHECK_PATH = /usr/bin/gtkdoc-check
 GTKDOC_DEPS_CFLAGS = 
 GTKDOC_DEPS_LIBS = 
-GTKDOC_MKPDF = 
-GTKDOC_REBASE = true
+GTKDOC_MKPDF = /usr/bin/gtkdoc-mkpdf
+GTKDOC_REBASE = /usr/bin/gtkdoc-rebase
 G_LIBS_EXTRA = 
 G_MODULE_BROKEN_RTLD_GLOBAL = 0
 G_MODULE_HAVE_DLERROR = 1
@@ -1967,9 +1967,9 @@ PCRE_REQUIRES =
 PCRE_WARN_CFLAGS =  -Wno-pointer-sign
 PERL = perl
 PERL_PATH = /usr/bin/perl
-PKG_CONFIG = /usr/bin/pkg-config
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
+PKG_CONFIG = /usr/bin/arm-linux-gnueabihf-pkg-config
+PKG_CONFIG_LIBDIR = /home/work//bluez/build/lib/pkgconfig/
+PKG_CONFIG_PATH = /work/bluez/build/lib/pkgconfig
 PLATFORMDEP = 
 POFILES =  af.po am.po an.po ar.po as.po ast.po az.po be.po be@latin.po bg.po bn.po bn_IN.po bs.po ca.po ca@valencia.po cs.po cy.po da.po de.po dz.po el.po en_CA.po en_GB.po en@shaw.po eo.po es.po et.po eu.po fa.po fi.po fr.po ga.po gl.po gu.po he.po hi.po hr.po hu.po hy.po id.po is.po it.po ja.po ka.po kk.po kn.po ko.po ku.po lt.po lv.po mai.po mg.po mk.po ml.po mn.po mr.po ms.po nb.po nds.po ne.po nl.po nn.po oc.po or.po pa.po pl.po ps.po pt.po pt_BR.po ro.po ru.po rw.po si.po sk.po sl.po sq.po sr.po sr@latin.po sr@ije.po sv.po ta.po te.po tg.po th.po tl.po tr.po ug.po tt.po uk.po vi.po wa.po xh.po yi.po zh_CN.po zh_HK.po zh_TW.po
 POSUB = po
@@ -1994,9 +1994,9 @@ WINDRES =
 WSPIAPI_INCLUDE = 
 XATTR_LIBS = 
 XGETTEXT = /usr/bin/xgettext
-XMLCATALOG = no
+XMLCATALOG = /home/chen/work/bluez/build/bin/xmlcatalog
 XML_CATALOG_FILE = /etc/xml/catalog
-XSLTPROC = 
+XSLTPROC = /usr/bin/xsltproc
 ZLIB_CFLAGS = -I/home/chen/work/bluez/build/include
 ZLIB_LIBS = -lz -L/home/chen/work/bluez/build/lib
 abs_builddir = /home/chen/work/bluez/install/2glib/gio/tests
@@ -2382,12 +2382,12 @@ gmenumodel_SOURCES = $(gdbus_sessionbus_sources) gmenumodel.c
 gnotification_SOURCES = $(gdbus_sessionbus_sources) gnotification.c gnotification-server.h gnotification-server.c
 tls_interaction_SOURCES = tls-interaction.c gtesttlsbackend.c gtesttlsbackend.h
 #no_undefined = -no-undefined
-gdbus_serialization_CFLAGS = $(AM_CFLAGS) $(DBUS1_CFLAGS)
-gdbus_serialization_LDADD = $(LDADD) $(DBUS1_LIBS)
-gdbus_serialization_SOURCES = \
-	gdbus-serialization.c			\
-	gdbus-tests.h				\
-	gdbus-tests.c
+#gdbus_serialization_CFLAGS = $(AM_CFLAGS) $(DBUS1_CFLAGS)
+#gdbus_serialization_LDADD = $(LDADD) $(DBUS1_LIBS)
+#gdbus_serialization_SOURCES = \
+#	gdbus-serialization.c			\
+#	gdbus-tests.h				\
+#	gdbus-tests.c
 
 resources_SOURCES = resources.c
 nodist_resources_SOURCES = test_resources.c test_resources2.c test_resources2.h

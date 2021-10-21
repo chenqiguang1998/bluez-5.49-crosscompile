@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chen/work/bluez/install/1libical
+CMAKE_SOURCE_DIR = /home/chen/work/bluez/install/libical
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chen/work/bluez/install/1libical/build
+CMAKE_BINARY_DIR = /home/chen/work/bluez/install/libical/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/doesnothing.dir/depend.make
@@ -59,68 +59,68 @@ include examples/CMakeFiles/doesnothing.dir/flags.make
 
 examples/CMakeFiles/doesnothing.dir/access_components.c.o: examples/CMakeFiles/doesnothing.dir/flags.make
 examples/CMakeFiles/doesnothing.dir/access_components.c.o: ../examples/access_components.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/doesnothing.dir/access_components.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/access_components.c.o   -c /home/chen/work/bluez/install/1libical/examples/access_components.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object examples/CMakeFiles/doesnothing.dir/access_components.c.o"
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/access_components.c.o   -c /home/chen/work/bluez/install/libical/examples/access_components.c
 
 examples/CMakeFiles/doesnothing.dir/access_components.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/doesnothing.dir/access_components.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/examples/access_components.c > CMakeFiles/doesnothing.dir/access_components.c.i
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/examples/access_components.c > CMakeFiles/doesnothing.dir/access_components.c.i
 
 examples/CMakeFiles/doesnothing.dir/access_components.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/doesnothing.dir/access_components.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/examples/access_components.c -o CMakeFiles/doesnothing.dir/access_components.c.s
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/examples/access_components.c -o CMakeFiles/doesnothing.dir/access_components.c.s
 
 examples/CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.o: examples/CMakeFiles/doesnothing.dir/flags.make
 examples/CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.o: ../examples/access_properties_and_parameters.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.o   -c /home/chen/work/bluez/install/1libical/examples/access_properties_and_parameters.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.o"
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.o   -c /home/chen/work/bluez/install/libical/examples/access_properties_and_parameters.c
 
 examples/CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/examples/access_properties_and_parameters.c > CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.i
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/examples/access_properties_and_parameters.c > CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.i
 
 examples/CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/examples/access_properties_and_parameters.c -o CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.s
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/examples/access_properties_and_parameters.c -o CMakeFiles/doesnothing.dir/access_properties_and_parameters.c.s
 
 examples/CMakeFiles/doesnothing.dir/errors.c.o: examples/CMakeFiles/doesnothing.dir/flags.make
 examples/CMakeFiles/doesnothing.dir/errors.c.o: ../examples/errors.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object examples/CMakeFiles/doesnothing.dir/errors.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/errors.c.o   -c /home/chen/work/bluez/install/1libical/examples/errors.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object examples/CMakeFiles/doesnothing.dir/errors.c.o"
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/errors.c.o   -c /home/chen/work/bluez/install/libical/examples/errors.c
 
 examples/CMakeFiles/doesnothing.dir/errors.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/doesnothing.dir/errors.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/examples/errors.c > CMakeFiles/doesnothing.dir/errors.c.i
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/examples/errors.c > CMakeFiles/doesnothing.dir/errors.c.i
 
 examples/CMakeFiles/doesnothing.dir/errors.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/doesnothing.dir/errors.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/examples/errors.c -o CMakeFiles/doesnothing.dir/errors.c.s
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/examples/errors.c -o CMakeFiles/doesnothing.dir/errors.c.s
 
 examples/CMakeFiles/doesnothing.dir/main.c.o: examples/CMakeFiles/doesnothing.dir/flags.make
 examples/CMakeFiles/doesnothing.dir/main.c.o: ../examples/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object examples/CMakeFiles/doesnothing.dir/main.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/main.c.o   -c /home/chen/work/bluez/install/1libical/examples/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object examples/CMakeFiles/doesnothing.dir/main.c.o"
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/main.c.o   -c /home/chen/work/bluez/install/libical/examples/main.c
 
 examples/CMakeFiles/doesnothing.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/doesnothing.dir/main.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/examples/main.c > CMakeFiles/doesnothing.dir/main.c.i
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/examples/main.c > CMakeFiles/doesnothing.dir/main.c.i
 
 examples/CMakeFiles/doesnothing.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/doesnothing.dir/main.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/examples/main.c -o CMakeFiles/doesnothing.dir/main.c.s
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/examples/main.c -o CMakeFiles/doesnothing.dir/main.c.s
 
 examples/CMakeFiles/doesnothing.dir/parse_text.c.o: examples/CMakeFiles/doesnothing.dir/flags.make
 examples/CMakeFiles/doesnothing.dir/parse_text.c.o: ../examples/parse_text.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object examples/CMakeFiles/doesnothing.dir/parse_text.c.o"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/parse_text.c.o   -c /home/chen/work/bluez/install/1libical/examples/parse_text.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object examples/CMakeFiles/doesnothing.dir/parse_text.c.o"
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/doesnothing.dir/parse_text.c.o   -c /home/chen/work/bluez/install/libical/examples/parse_text.c
 
 examples/CMakeFiles/doesnothing.dir/parse_text.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/doesnothing.dir/parse_text.c.i"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/1libical/examples/parse_text.c > CMakeFiles/doesnothing.dir/parse_text.c.i
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chen/work/bluez/install/libical/examples/parse_text.c > CMakeFiles/doesnothing.dir/parse_text.c.i
 
 examples/CMakeFiles/doesnothing.dir/parse_text.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/doesnothing.dir/parse_text.c.s"
-	cd /home/chen/work/bluez/install/1libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/1libical/examples/parse_text.c -o CMakeFiles/doesnothing.dir/parse_text.c.s
+	cd /home/chen/work/bluez/install/libical/build/examples && /usr/local/arm/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chen/work/bluez/install/libical/examples/parse_text.c -o CMakeFiles/doesnothing.dir/parse_text.c.s
 
 # Object files for target doesnothing
 doesnothing_OBJECTS = \
@@ -143,8 +143,8 @@ bin/doesnothing: lib/libicalss.so.1.0.1
 bin/doesnothing: lib/libicalvcal.so.1.0.1
 bin/doesnothing: lib/libical.so.1.0.1
 bin/doesnothing: examples/CMakeFiles/doesnothing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chen/work/bluez/install/1libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable ../bin/doesnothing"
-	cd /home/chen/work/bluez/install/1libical/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/doesnothing.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chen/work/bluez/install/libical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable ../bin/doesnothing"
+	cd /home/chen/work/bluez/install/libical/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/doesnothing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/doesnothing.dir/build: bin/doesnothing
@@ -152,10 +152,10 @@ examples/CMakeFiles/doesnothing.dir/build: bin/doesnothing
 .PHONY : examples/CMakeFiles/doesnothing.dir/build
 
 examples/CMakeFiles/doesnothing.dir/clean:
-	cd /home/chen/work/bluez/install/1libical/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/doesnothing.dir/cmake_clean.cmake
+	cd /home/chen/work/bluez/install/libical/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/doesnothing.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/doesnothing.dir/clean
 
 examples/CMakeFiles/doesnothing.dir/depend:
-	cd /home/chen/work/bluez/install/1libical/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chen/work/bluez/install/1libical /home/chen/work/bluez/install/1libical/examples /home/chen/work/bluez/install/1libical/build /home/chen/work/bluez/install/1libical/build/examples /home/chen/work/bluez/install/1libical/build/examples/CMakeFiles/doesnothing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chen/work/bluez/install/libical/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chen/work/bluez/install/libical /home/chen/work/bluez/install/libical/examples /home/chen/work/bluez/install/libical/build /home/chen/work/bluez/install/libical/build/examples /home/chen/work/bluez/install/libical/build/examples/CMakeFiles/doesnothing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/doesnothing.dir/depend
 

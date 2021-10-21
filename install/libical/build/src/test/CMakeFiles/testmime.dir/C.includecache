@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/chen/work/bluez/install/1libical/src/test/testmime.c
+/home/chen/work/bluez/install/libical/src/test/testmime.c
 config.h
-/home/chen/work/bluez/install/1libical/src/test/config.h
+/home/chen/work/bluez/install/libical/src/test/config.h
 libical/ical.h
 -
 stdlib.h

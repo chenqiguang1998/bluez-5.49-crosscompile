@@ -74,14 +74,14 @@ DESTDIR =
 ETAGS = etags
 CTAGS = ctags -tw
 
-CFLAGS = -g -O
+CFLAGS = -fPIE -I/home/chen/work/bluez/build/include/
 LOCAL_CFLAGS =  -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
-CPPFLAGS = -P
+CPPFLAGS = -I/home/chen/work/bluez/build/include/
 
 DEFS = -DHAVE_CONFIG_H 
 LOCAL_DEFS = 
 
-TERMCAP_LIB = -ltermcap
+TERMCAP_LIB = -lncurses
 
 # For libraries which include headers from other libraries.
 INCLUDES = -I. -I$(srcdir)
@@ -93,7 +93,7 @@ CCFLAGS = $(XCCFLAGS) $(LOCAL_CFLAGS) $(CFLAGS)
 GCC_LINT_FLAGS = -ansi -Wall -Wshadow -Wpointer-arith -Wcast-qual \
 		 -Wwrite-strings -Wstrict-prototypes \
 		 -Wmissing-prototypes -Wno-implicit -pedantic
-GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT_FLAGS) -g -O 
+GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT_FLAGS) -fPIE -I/home/chen/work/bluez/build/include/ 
 
 ASAN_XCFLAGS = -fsanitize=address -fno-omit-frame-pointer
 ASAN_XLDFLAGS = -fsanitize=address

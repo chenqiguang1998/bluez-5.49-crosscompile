@@ -6,37 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/icalvcal.c
+/home/chen/work/bluez/install/libical/src/libicalvcal/icalvcal.c
 config.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/config.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/config.h
 icalvcal.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/icalvcal.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/icalvcal.h
 string.h
 -
 stddef.h
 -
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/icalvcal.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/icalvcal.h
 libical/ical.h
 -
 vcc.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcc.h
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/port.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/port.h
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcaltmp.c
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcaltmp.c
 stdio.h
 -
 string.h
 -
 vcaltmp.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcaltmp.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcaltmp.h
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcaltmp.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcaltmp.h
 vcc.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcc.h
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.c
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcc.c
 stdlib.h
 -
 string.h
@@ -54,17 +54,17 @@ stdlib.h
 ctype.h
 -
 vcc.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcc.h
 stdio.h
 -
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vcc.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vcc.h
 vobject.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vobject.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vobject.h
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vobject.c
+/home/chen/work/bluez/install/libical/src/libicalvcal/vobject.c
 vobject.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vobject.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vobject.h
 stdlib.h
 -
 string.h
@@ -74,9 +74,9 @@ stdio.h
 fcntl.h
 -
 
-/home/chen/work/bluez/install/1libical/src/libicalvcal/vobject.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/vobject.h
 port.h
-/home/chen/work/bluez/install/1libical/src/libicalvcal/port.h
+/home/chen/work/bluez/install/libical/src/libicalvcal/port.h
 stdlib.h
 -
 stdio.h

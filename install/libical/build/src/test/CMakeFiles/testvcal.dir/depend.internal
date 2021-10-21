@@ -6,5 +6,5 @@ src/test/CMakeFiles/testvcal.dir/testvcal.c.o
  ../src/libicalvcal/port.h
  ../src/libicalvcal/vcc.h
  ../src/libicalvcal/vobject.h
- /home/chen/work/bluez/install/1libical/src/test/testvcal.c
+ /home/chen/work/bluez/install/libical/src/test/testvcal.c
  src/libical/ical.h

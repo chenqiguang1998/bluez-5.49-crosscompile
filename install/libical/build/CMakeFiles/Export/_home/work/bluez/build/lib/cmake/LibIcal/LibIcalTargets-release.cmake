@@ -9,34 +9,34 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET ical APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(ical PROPERTIES
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "-lpthread"
-  IMPORTED_LOCATION_RELEASE "/home/work/bluez/build/lib/libical.so.1.0.1"
+  IMPORTED_LOCATION_RELEASE "/home/chen/work/bluez/build/lib/libical.so.1.0.1"
   IMPORTED_SONAME_RELEASE "libical.so.1"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS ical )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ical "/home/work/bluez/build/lib/libical.so.1.0.1" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ical "/home/chen/work/bluez/build/lib/libical.so.1.0.1" )
 
 # Import target "icalss" for configuration "Release"
 set_property(TARGET icalss APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(icalss PROPERTIES
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "ical"
-  IMPORTED_LOCATION_RELEASE "/home/work/bluez/build/lib/libicalss.so.1.0.1"
+  IMPORTED_LOCATION_RELEASE "/home/chen/work/bluez/build/lib/libicalss.so.1.0.1"
   IMPORTED_SONAME_RELEASE "libicalss.so.1"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS icalss )
-list(APPEND _IMPORT_CHECK_FILES_FOR_icalss "/home/work/bluez/build/lib/libicalss.so.1.0.1" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_icalss "/home/chen/work/bluez/build/lib/libicalss.so.1.0.1" )
 
 # Import target "icalvcal" for configuration "Release"
 set_property(TARGET icalvcal APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(icalvcal PROPERTIES
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "ical"
-  IMPORTED_LOCATION_RELEASE "/home/work/bluez/build/lib/libicalvcal.so.1.0.1"
+  IMPORTED_LOCATION_RELEASE "/home/chen/work/bluez/build/lib/libicalvcal.so.1.0.1"
   IMPORTED_SONAME_RELEASE "libicalvcal.so.1"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS icalvcal )
-list(APPEND _IMPORT_CHECK_FILES_FOR_icalvcal "/home/work/bluez/build/lib/libicalvcal.so.1.0.1" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_icalvcal "/home/chen/work/bluez/build/lib/libicalvcal.so.1.0.1" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

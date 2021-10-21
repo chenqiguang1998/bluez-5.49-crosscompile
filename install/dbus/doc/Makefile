@@ -89,7 +89,7 @@ POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = arm-unknown-linux-gnueabihf
 #am__append_1 = $(XMLTO_HTML)
-##am__append_2 = dbus.devhelp2
+#am__append_2 = dbus.devhelp2
 ##am__append_3 = $(YELP_HTML)
 subdir = doc
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -211,28 +211,28 @@ CXXCPP = arm-linux-gnueabihf-g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -fno-strict-aliasing -Wall -Wextra -Wundef -Wwrite-strings -Wpointer-arith -Wmissing-declarations -Wredundant-decls -Wno-unused-parameter -Wno-missing-field-initializers -Wformat=2 -Wcast-align -Wformat-nonliteral -Wformat-security -Wsign-compare -Wstrict-aliasing -Wshadow -Winline -Wpacked -Wmissing-format-attribute -Wmissing-noreturn -Winit-self -Wmissing-include-dirs -Wunused-but-set-variable -Warray-bounds -Wreturn-type -Wno-overloaded-virtual -Wswitch-enum -Wswitch-default -Wchar-subscripts -Wfloat-equal -Wno-deprecated-declarations -Wno-cast-function-type -Wno-unused-label -Wno-error=unused-parameter -Wno-error=missing-field-initializers -Wno-error=overloaded-virtual -Wno-error=deprecated-declarations -Wno-error=unused-label 
 CYGPATH_W = echo
-DATADIR_FROM_PKGSYSCONFDIR = /home/chen/work/bluez/build/share
-DBUS_BINDIR = /home/chen/work/bluez/build/bin
+DATADIR_FROM_PKGSYSCONFDIR = /share
+DBUS_BINDIR = /bin
 DBUS_CONSOLE_OWNER_FILE = 
-DBUS_DAEMONDIR = /home/chen/work/bluez/build/bin
-DBUS_DATADIR = /home/chen/work/bluez/build/share
+DBUS_DAEMONDIR = /bin
+DBUS_DATADIR = /share
 DBUS_INT16_TYPE = short
 DBUS_INT32_TYPE = int
 DBUS_INT64_CONSTANT = (val##LL)
 DBUS_INT64_TYPE = long long
-DBUS_LIBEXECDIR = /home/chen/work/bluez/build/libexec
+DBUS_LIBEXECDIR = /libexec
 DBUS_MAJOR_VERSION = 1
 DBUS_MICRO_VERSION = 20
 DBUS_MINOR_VERSION = 12
-DBUS_PREFIX = /home/chen/work/bluez/build
+DBUS_PREFIX = 
 DBUS_SESSION_BUS_CONNECT_ADDRESS = autolaunch:
 DBUS_SESSION_BUS_LISTEN_ADDRESS = unix:tmpdir=/tmp
 DBUS_SESSION_CONF_MAYBE_AUTH_EXTERNAL = <auth>EXTERNAL</auth>
 DBUS_SESSION_SOCKET_DIR = /tmp
 DBUS_STATIC_BUILD_CPPFLAGS = 
-DBUS_SYSTEM_BUS_DEFAULT_ADDRESS = unix:path=/home/chen/work/bluez/build/var/run/dbus/system_bus_socket
-DBUS_SYSTEM_PID_FILE = /home/chen/work/bluez/build/var/run/dbus/pid
-DBUS_SYSTEM_SOCKET = /home/chen/work/bluez/build/var/run/dbus/system_bus_socket
+DBUS_SYSTEM_BUS_DEFAULT_ADDRESS = unix:path=/var/run/dbus/system_bus_socket
+DBUS_SYSTEM_PID_FILE = /var/run/dbus/pid
+DBUS_SYSTEM_SOCKET = /var/run/dbus/system_bus_socket
 DBUS_TEST_DATA = /home/chen/work/bluez/install/dbus/test/data
 DBUS_TEST_EXEC = /home/chen/work/bluez/install/dbus/test
 DBUS_TEST_USER = nobody
@@ -253,16 +253,16 @@ ECHO_N = -n
 ECHO_T = 
 EGREP = /usr/bin/grep -E
 EXEEXT = 
-EXPANDED_BINDIR = /home/chen/work/bluez/build/bin
-EXPANDED_DATADIR = /home/chen/work/bluez/build/share
-EXPANDED_LIBDIR = /home/chen/work/bluez/build/lib
-EXPANDED_LIBEXECDIR = /home/chen/work/bluez/build/libexec
-EXPANDED_LOCALSTATEDIR = /home/chen/work/bluez/build/var
-EXPANDED_PREFIX = /home/chen/work/bluez/build
-EXPANDED_RUNSTATEDIR = /home/chen/work/bluez/build/var/run
-EXPANDED_SYSCONFDIR = /home/chen/work/bluez/build/etc
-EXPAT_CFLAGS = 
-EXPAT_LIBS = -lexpat
+EXPANDED_BINDIR = /bin
+EXPANDED_DATADIR = /share
+EXPANDED_LIBDIR = /lib
+EXPANDED_LIBEXECDIR = /libexec
+EXPANDED_LOCALSTATEDIR = /var
+EXPANDED_PREFIX = 
+EXPANDED_RUNSTATEDIR = /var/run
+EXPANDED_SYSCONFDIR = /etc
+EXPAT_CFLAGS = -I/home/chen/work/bluez/build/include
+EXPAT_LIBS = -L/home/chen/work/bluez/build/lib -lexpat
 EXTRA_CFLAGS = -fno-strict-aliasing -fno-common -Wnested-externs -Wmissing-prototypes -Wstrict-prototypes -Wdeclaration-after-statement -Wimplicit-function-declaration -Wold-style-definition -Wjump-misses-init -Wall -Wextra -Wundef -Wwrite-strings -Wpointer-arith -Wmissing-declarations -Wredundant-decls -Wno-unused-parameter -Wno-missing-field-initializers -Wformat=2 -Wcast-align -Wformat-nonliteral -Wformat-security -Wsign-compare -Wstrict-aliasing -Wshadow -Winline -Wpacked -Wmissing-format-attribute -Wmissing-noreturn -Winit-self -Wmissing-include-dirs -Wunused-but-set-variable -Warray-bounds -Wreturn-type -Wswitch-enum -Wswitch-default -Wlogical-op -Wdouble-promotion -Wchar-subscripts -Wfloat-equal -Wpointer-sign -Wno-deprecated-declarations -Wno-cast-function-type -Wno-unused-label -Wno-error=unused-parameter -Wno-error=missing-field-initializers -Wno-error=deprecated-declarations -Wno-error=unused-label
 EXTRA_CXXFLAGS = -fno-strict-aliasing -Wall -Wextra -Wundef -Wwrite-strings -Wpointer-arith -Wmissing-declarations -Wredundant-decls -Wno-unused-parameter -Wno-missing-field-initializers -Wformat=2 -Wcast-align -Wformat-nonliteral -Wformat-security -Wsign-compare -Wstrict-aliasing -Wshadow -Winline -Wpacked -Wmissing-format-attribute -Wmissing-noreturn -Winit-self -Wmissing-include-dirs -Wunused-but-set-variable -Warray-bounds -Wreturn-type -Wno-overloaded-virtual -Wswitch-enum -Wswitch-default -Wchar-subscripts -Wfloat-equal -Wno-deprecated-declarations -Wno-cast-function-type -Wno-unused-label -Wno-error=unused-parameter -Wno-error=missing-field-initializers -Wno-error=overloaded-virtual -Wno-error=deprecated-declarations -Wno-error=unused-label
 EXTRA_LDFLAGS = -Wl,--no-as-needed
@@ -316,7 +316,7 @@ PACKAGE_TARNAME = dbus
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.12.20
 PATH_SEPARATOR = :
-PKG_CONFIG = /usr/bin/pkg-config
+PKG_CONFIG = /usr/bin/arm-linux-gnueabihf-pkg-config
 PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
 PYTHON_PLATFORM = linux
@@ -332,7 +332,7 @@ SET_MAKE =
 SHELL = /bin/bash
 SOVERSION = 3
 STRIP = arm-linux-gnueabihf-strip
-SYSCONFDIR_FROM_PKGDATADIR = /home/chen/work/bluez/build/etc
+SYSCONFDIR_FROM_PKGDATADIR = /etc
 SYSTEMCTL = /usr/bin/systemctl
 SYSTEMD_CFLAGS = 
 SYSTEMD_LIBS = 
@@ -349,7 +349,7 @@ WARN_LDFLAGS = -Wl,--no-as-needed
 WARN_SCANNERFLAGS =               --warn-all                                                             
 XMKMF = 
 XMLTO = no
-XSLTPROC = 
+XSLTPROC = xsltproc
 X_CFLAGS = 
 X_EXTRA_LIBS = 
 X_LIBS = 
@@ -403,7 +403,7 @@ pdfdir = ${docdir}
 pkgconfig_prefix = ${original_prefix}
 pkgpyexecdir = ${pyexecdir}/dbus
 pkgpythondir = ${pythondir}/dbus
-prefix = /home/chen/work/bluez/build
+prefix = 
 program_transform_name = s,x,x,
 psdir = ${docdir}
 pyexecdir = ${exec_prefix}/lib/python3.8/site-packages
@@ -882,8 +882,8 @@ uninstall-man: uninstall-man1
 #	$(AM_V_GEN)cd $(top_builddir) && doxygen Doxyfile
 #	@touch $@
 
-##dbus.devhelp2: $(srcdir)/doxygen_to_devhelp.xsl doxygen.stamp
-##	$(XSLTPROC) -o $@ $< api/xml/index.xml
+#dbus.devhelp2: $(srcdir)/doxygen_to_devhelp.xsl doxygen.stamp
+#	$(XSLTPROC) -o $@ $< api/xml/index.xml
 
 ##%.page: %.duck
 ##	$(DUCKTYPE) -o $@ $<
