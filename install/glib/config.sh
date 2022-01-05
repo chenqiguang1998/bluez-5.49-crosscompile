@@ -29,7 +29,3 @@ make
 
 make install
 
-#qiguang.cheng.veex_chengdu@veexinc.com
-#Hok641023 
-#Hok641023
-#
